@@ -25,6 +25,8 @@ Welcome to the official homepage of the CellularEye dataset. CellularEye is a pi
 **Diverse Scenarios**: Covers a wide range of environmental conditions, including different times of day, weather patterns, and target activities.
 **Continuous Evolution**: CellularEye is a living dataset. We are committed to continuously updating it with more data and richer annotations.
 
+## Getting Started & Downloads
+
 We provide a Python-based development kit to help you easily read and visualize the data.
 
 {: .box-note}
@@ -34,7 +36,7 @@ We provide a Python-based development kit to help you easily read and visualize 
 {: .box-note}
 | Version | Release Date | Description | Download Link |
 | :--- | :--- | :--- | :--- |
-| **v1.0** | Oct 2025 | Initial public release. Contains 50 scenarios under various daytime conditions. | [Download from Purple Mountain Laboratories](http://pmldatanet.com.cn/) |
+| **v1.0** | Oct 2025 | Initial Public Release. Contains multi-temporal IQ, infrared, visible light, and meteorological data. | [Download from Purple Mountain Laboratories](http://pmldatanet.com.cn/) |
 
 <details markdown="1">
 <summary>Click here!</summary>
