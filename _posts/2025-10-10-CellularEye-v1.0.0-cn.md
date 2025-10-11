@@ -60,6 +60,12 @@ mathjax: true
 
 ![mmw-scan-intro]({{ '/assets/img/mmw-scan-intro.png' | relative_url }})
 
+## 采集场景
+
+**紫金山实验室6G概念验证中心外场**
+
+![scenario-pml]({{ '/assets/img/scenario-pml.png' | relative_url }})
+
 ## 快速上手与下载
 
 **为了方便您使用，我们提供Python脚本，可以帮助您轻松地读取和可视化数据。**
