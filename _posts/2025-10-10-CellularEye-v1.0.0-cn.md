@@ -1,0 +1,47 @@
+---
+layout: post
+title: CellularEye 数据集v1.0.0
+subtitle: 一个基于商用蜂窝网络、持续演进的大规模环境感知数据集
+tags: [Dataset, ISAC, Wireless-Communications]
+comments: true
+mathjax: true
+---
+
+## 引言
+
+{: .box-success}
+欢迎访问 CellularEye 数据集的官方主页。**CellularEye** 是一个开创性的大规模多模态数据集，专为前沿的环境感知研究而设计。本项目最大的特色在于，我们利用**商用通信设备（BBU、AAU）** 采集了真实的蜂窝网络IQ数据，并与高分辨率的可见光、红外视频及天气数据进行了高精度同步。我们的目标是填补通信与感知领域之间的空白，为广大研究者探索“**通感一体化 (ISAC)**”的未来提供强有力的真实数据支撑。
+
+![Multi-modal]({{ '/assets/img/multi-modal.png' | relative_url }})
+
+![RV Map Example]({{ '/assets/img/rv-map.gif' | relative_url }})
+
+
+## 核心特色
+
+{: .box-note}
+**商用蜂窝信号**：数据来源于真实运行的商用蜂窝网络设备，而非仿真或实验室环境信号，具有极高的研究价值。
+**丰富的多模态数据**：包含了严格同步的IQ数据流、可见光视频、红外视频以及详细的气象指标。
+**多样化的采集场景**：覆盖了不同时间段、天气状况和目标活动等一系列丰富的现实世界场景。
+**持续演进的数据集**：CellularEye 是一个“活”的数据集。我们致力于持续更新，未来将发布更多场景、更丰富标注的数据。
+
+## 快速上手与下载
+
+为了方便您使用，我们提供Python脚本，可以帮助您轻松地读取和可视化数据。
+
+{: .box-note}
+**阅读文档**：在下载前，请务必阅读我们详细的 **[数据集说明文档]({{'/assets/doc/多模态数据采集格式说明_20250828.pdf' | relative_url }})**。
+**下载数据**：我们建议通过以下链接下载数据集。为了保证您研究的可复现性，请在论文中明确注明您所使用的具体版本。
+
+{: .box-note}
+| 版本号 | 发布日期 | 描述 | 下载链接 |
+| :--- | :--- | :--- | :--- |
+| **v1.0** | 2025年10月 | 首次公开发布。包含不同时间段IQ、红外、可见光、气象数据 | [紫金山实验室-无线网络真实数据开放平台](http://pmldatanet.com.cn/) |
+
+<details markdown="1">
+<summary>Click here!</summary>
+Here you can see an **expandable** section
+</details>
+
+
+
