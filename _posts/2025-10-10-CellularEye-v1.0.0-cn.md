@@ -57,8 +57,12 @@ mathjax: true
     └── ...
 ```
 #### 毫米波IQ数据示意图
-
+每一个.bin文件表示一个感知帧，.bin文件的数据排列方式如下图所示 
 ![mmw-scan-intro]({{ '/assets/img/mmw-scan-intro.png' | relative_url }})
+
+#### 系统参数示意图
+系统的感知参数如下图所示
+![system-parameters]({{ '/assets/img/parameter.png' | relative_url }})
 
 ## 采集场景
 
@@ -68,10 +72,15 @@ mathjax: true
 
 ## 快速上手与下载
 
-**为了方便您使用，我们提供Python脚本，可以帮助您轻松地读取和可视化数据。**
+为了方便您使用，我们提供 **[Python脚本]({{'assets/doc/rv_public_v3.py' | relative_url }})**，可以帮助您轻松地读取和可视化数据。 
+您可以使用以下方式运行该脚本 
+```
+python rv_public_v3.py --bin_dir /public_data/2025_10_19_18_00/mmw --bs_id 22 --beam_id 30
+```
 
 {: .box-note}
-**阅读文档**：在下载前，请务必阅读我们详细的 **[数据集说明文档]({{'/assets/doc/多模态数据采集格式说明_20250828.pdf' | relative_url }})**。  
+<!-- **阅读文档**：在下载前，请务必阅读我们详细的 **[数据集说明文档]({{'/assets/doc/多模态数据采集格式说明_20250828.pdf' | relative_url }})**。  
+这是一行被注释掉的文字，不会被渲染 -->
 **下载数据**：我们建议通过以下链接下载数据集。为了保证您研究的可复现性，请在论文中明确注明您所使用的具体版本。
 
 {: .box-note}
