@@ -13,7 +13,7 @@ mathjax: true
 Welcome to the official homepage of the CellularEye dataset.  
 **CellularEye** is a pioneering large-scale multi-modal dataset designed for cutting-edge environmental perception research. Its core feature is the use of **commercial communication equipment (BBU, AAU)** to collect real-world cellular network IQ data, synchronized with high-resolution visible-light video, infrared video, and weather data. Our goal is to bridge the gap between communication and sensing, providing robust, real-world data support for researchers exploring the future of **Integrated Sensing and Communication (ISAC)**.
 
-![Multi-modal]({{ '/assets/img/multi-modal.png' | relative_url }})
+![Multi-modal]({{ '/assets/img/multi-modal-en.png' | relative_url }})
 
 ![RV Map Example]({{ '/assets/img/rv-map.gif' | relative_url }})
 
