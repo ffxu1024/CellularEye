@@ -67,7 +67,7 @@ The system's sensing parameters are shown in the figure below.
 
 **Purple Mountain Laboratories (PML) 6G Veriﬁcation Center, Outdoor Field**
 
-![scenario-pml]({{ '/assets/img/scenario-pml.png' | relative_url }})
+![scenario-pml]({{ '/assets/img/scenario-pml-en.png' | relative_url }})
 
 ## Quick Start & Download
 
