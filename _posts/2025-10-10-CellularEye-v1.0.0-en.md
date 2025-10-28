@@ -37,7 +37,7 @@ To capture diverse environmental characteristics, we perform synchronized data c
 All data is archived by collection sequence (i.e., the start time of the collection task). In the dataset's root directory, you will find the following folder structure:
 ```
 <dataset_root>/
-└── 2025_09_27_00_00/  # 采集序列ID (格式: YYYY_MM_DD_HH_MM)
+└── 2025_09_27_00_00/  # Collection id (YYYY_MM_DD_HH_MM)
     ├── camera/
     │   ├── camera_2025-09-27-00_01_01.mp4
     │   ├── ir_2025-09-27-00_01_01.mp4
