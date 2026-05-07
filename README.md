@@ -1,0 +1,52 @@
+# CellularEye Dataset
+
+> A Large-Scale, Evolving Multi-modal Dataset for Environmental Perception Based on Commercial off-the-shelf (COTS) 5G/5G-A gNB Devices
+
+## Introduction
+
+**CellularEye** is a pioneering large-scale multi-modal dataset designed for cutting-edge environmental perception research. Its core feature is the use of **commercial communication equipment (BBU, AAU)** to collect real-world cellular network IQ data, synchronized with high-resolution visible-light video, infrared video, and weather data. Our goal is to bridge the gap between communication and sensing, providing robust, real-world data support for researchers exploring the future of **Integrated Sensing and Communication (ISAC)**.
+
+![Multi-modal](assets/img/multi-modal-en.png)
+
+## Key Features
+
+- **Commercial Cellular Signals**: Data originates from operational, commercial cellular network equipment.
+- **Rich Multi-modal Data**: Includes tightly synchronized IQ data streams, RGB video, infrared video, and detailed meteorological metrics.
+- **Diverse Scenarios**: Covers a wide range of real-world scenarios, including different times of day, weather conditions, and target activities.
+
+## Dataset Structure
+
+```text
+<dataset_root>/
+└── 2025_09_27_00_00/
+    ├── camera/
+    ├── meteorological/
+    └── mmw/
+        ├── 21/
+        │   ├── 2025_09_27_00_01_01_280.bin
+        │   └── ...
+        ├── 22/
+        ├── 23/
+        └── 24/
+```
+
+## Quick Start & Provided Scripts
+
+To facilitate easy usage and reproduction of our dataset analysis, we provide the following python scripts in the `src/` directory.
+
+### Dataset Processing & Generation
+- **`src/generate_real_dataset.py`**: Processes raw `.bin` recordings, applies phase correction/calibration, and generates YOLO bounding box labels for real-world captures.
+- **`src/generate_simulate_dataset.py`**: Focuses on generating simulated data without complex real-world alignment issues, serving as a baseline.
+- **`src/generate_synthetic_dataset.py`**: Generates fully synthetic Range-Doppler (RD) maps and YOLO labels using mathematical target models.
+
+### Visualization & Verification
+- **`src/visualize_real_dataset.py`**: Generates GIFs and visual grids to verify the alignment between target bounding boxes and real radar IQ RD images.
+- **`src/visualize_synthetic_dataset.py`**: Visual confirmation tool for synthetic data.
+
+### Academic Reproducibility
+- **`src/save_rd_paper_fig.py`**: Specialized tool for generating high-quality, publication-ready RD figures used in our paper. Includes support for 30-beam unified grids and customizable academic matplotlib presets.
+
+**Example Command**:
+```bash
+python src/save_rd_paper_fig.py --bin_dir /path/to/data/2025_10_18_00_00/mmw --bs_id 23 --beam_id 30
+```
