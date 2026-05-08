@@ -7,6 +7,8 @@
 **CellularEye** is a pioneering large-scale multi-modal dataset designed for cutting-edge environmental perception research. Its core feature is the use of **commercial communication equipment (BBU, AAU)** to collect real-world cellular network IQ data, synchronized with high-resolution visible-light video, infrared video, and weather data. Our goal is to bridge the gap between communication and sensing, providing robust, real-world data support for researchers exploring the future of **Integrated Sensing and Communication (ISAC)**.
 
 ![Multi-modal](assets/img/multi-modal-en.png)
+![RD Map Example](assets/img/rv-map.gif)
+
 
 ## Key Features
 
@@ -30,6 +32,19 @@
         └── 24/
 ```
 
+#### mmWave IQ Data Illustration
+
+Each `.bin` file represents one sensing frame. The data arrangement within the `.bin` file is shown in the figure below.
+
+![mmw-scan-intro](assets/img/mmw-scan-intro.png)
+
+#### System Parameters Illustration
+
+The system's sensing parameters are shown in the figure below.
+
+![system-parameters](assets/img/parameter.png)
+
+
 ## Quick Start & Provided Scripts
 
 To facilitate easy usage and reproduction of our dataset analysis, we provide the following python scripts in the `src/` directory.
@@ -50,3 +65,10 @@ To facilitate easy usage and reproduction of our dataset analysis, we provide th
 ```bash
 python src/save_rd_paper_fig.py --bin_dir /path/to/data/2025_10_18_00_00/mmw --bs_id 23 --beam_id 30
 ```
+
+> **Download Data**: We recommend downloading the dataset via the following links. To ensure the reproducibility of your research, please explicitly state the dataset version you used in your paper.
+
+| Version | Release Date | Description | Download Link |
+| :--- | :--- | :--- | :--- |
+| **v1.0** | October 2025 | First public release. Includes IQ, infrared, visible-light from different times of the day. | [Huggingface CellularEye](https://huggingface.co/datasets/anonymousff/CellularEye_v1.0) |
+| **v1.1** | December 2025 | Add: meteorological data and drone target data. | [Huggingface CellularEye](https://huggingface.co/datasets/anonymousff/CellularEye_v1.0) |
