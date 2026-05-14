@@ -1,19 +1,19 @@
 # CellularEye Dataset
 
-> A Large-Scale, Evolving Multi-modal Dataset for Environmental Perception Based on Commercial off-the-shelf (COTS) 5G/5G-A gNB Devices
+> A Large-Scale, Evolving Multimodal Dataset for Environmental Perception Based on Commercial off-the-shelf (COTS) 5G/5G-A gNB Devices
 
 ## Introduction
 
-**CellularEye** is a pioneering large-scale multi-modal dataset designed for cutting-edge environmental perception research. Its core feature is the use of **commercial communication equipment (BBU, AAU)** to collect real-world cellular network IQ data, synchronized with high-resolution visible-light video, infrared video, and weather data. Our goal is to bridge the gap between communication and sensing, providing robust, real-world data support for researchers exploring the future of **Integrated Sensing and Communication (ISAC)**.
+**CellularEye** is a pioneering large-scale multimodal dataset designed for cutting-edge environmental perception research. Its core feature is the use of **commercial communication equipment (BBU, AAU)** to collect real-world cellular network IQ data, synchronized with high-resolution visible-light video, infrared video, and weather data. Our goal is to bridge the gap between communication and sensing, providing robust, real-world data support for researchers exploring the future of **Integrated Sensing and Communication (ISAC)**. 
 
-![Multi-modal](assets/img/multi-modal-en.png)
+![Multimodal](assets/img/multi-modal-en.png)
 ![RD Map Example](assets/img/rv-map.gif)
 
 
 ## Key Features
 
 - **Commercial Cellular Signals**: Data originates from operational, commercial cellular network equipment.
-- **Rich Multi-modal Data**: Includes tightly synchronized IQ data streams, RGB video, infrared video, and detailed meteorological metrics.
+- **Rich Multimodal Data**: Includes tightly synchronized IQ data streams, RGB video, infrared video, and detailed meteorological metrics.
 - **Diverse Scenarios**: Covers a wide range of real-world scenarios, including different times of day, weather conditions, and target activities.
 
 ## Dataset Structure
@@ -55,8 +55,8 @@ To facilitate easy usage and reproduction of our dataset analysis, we provide th
 - **`src/generate_synthetic_dataset.py`**: Generates fully synthetic Range-Doppler (RD) maps and YOLO labels using mathematical target models.
 
 ### Visualization & Verification
-- **`src/visualize_real_dataset.py`**: Generates GIFs and visual grids to verify the alignment between target bounding boxes and real radar IQ RD images.
-- **`src/visualize_synthetic_dataset.py`**: Visual confirmation tool for synthetic data.
+- **`src/visualize_dataset.py --type real`**: Generates GIFs and visual grids to verify the alignment between target bounding boxes and real radar IQ RD images.
+- **`src/visualize_dataset.py --type synthetic`**: Visual confirmation tool for synthetic data.
 
 ### Academic Reproducibility
 - **`src/save_rd_paper_fig.py`**: Specialized tool for generating high-quality, publication-ready RD figures used in our paper. Includes support for 30-beam unified grids and customizable academic matplotlib presets.
@@ -72,3 +72,9 @@ python src/save_rd_paper_fig.py --bin_dir /path/to/data/2025_10_18_00_00/mmw --b
 | :--- | :--- | :--- | :--- |
 | **v1.0** | October 2025 | First public release. Includes IQ, infrared, visible-light from different times of the day. | [Huggingface CellularEye](https://huggingface.co/datasets/anonymousff/CellularEye_v1.0) |
 | **v1.1** | December 2025 | Add: meteorological data and drone target data. | [Huggingface CellularEye](https://huggingface.co/datasets/anonymousff/CellularEye_v1.0) |
+
+## License and Citation
+
+* **Code License:** The source code in this repository is licensed under the [MIT License](LICENSE).
+* **Patent Notice:** The underlying algorithms and data processing methods may be subject to pending or granted patents owned by Southeast University or Purple Mountain Laboratories. The MIT license granted herein applies strictly to the source code and does not convey any express or implied licenses under such patents. For commercial use of the patented methods, please contact the technology transfer office of the institution.
+* **Dataset License:** The CellularEye dataset is hosted separately on [HuggingFace](https://huggingface.co/datasets/anonymousff/CellularEye_v1.0)/[PMLdatanet](http://pmldatanet.com.cn/dataapp/multimodal) and is strictly licensed under the **CC BY-NC 4.0** (Creative Commons Attribution-NonCommercial 4.0 International) license. It is intended for academic research only.
