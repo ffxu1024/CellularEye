@@ -1,0 +1,7 @@
+path: Exp_Redo_D_E/data
+train:
+  - Baseline_Real_bs23_beam14_w10h10_correct-label-bin/images/train
+  - synthetic_uav_153_bs22_beam14/images/train
+val: gt_BS22_Real_bs22_beam14_w10h10_correct-label-bin/images/val
+names:
+  0: uav

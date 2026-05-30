@@ -47,6 +47,13 @@ The system's sensing parameters are shown in the figure below.
 
 ## Quick Start & Provided Scripts
 
+### Create and activate the environment**:
+   ```bash
+   # Create the environment from the provided config file
+   mamba env create -f environment.yaml
+   mamba activate cellulareye
+   ```
+
 To facilitate easy usage and reproduction of our dataset analysis, we provide the following python scripts in the `src/` directory.
 
 ### Dataset Processing & Generation
@@ -65,6 +72,9 @@ To facilitate easy usage and reproduction of our dataset analysis, we provide th
 ```bash
 python src/save_rd_paper_fig.py --bin_dir /path/to/data/2025_10_18_00_00/mmw --bs_id 23 --beam_id 30
 ```
+- **`Exp_Redo_D_E/code/train_errorbar.py`** Train cross-domain adaptation experiment with different data augmentation method (Empty BG, Real+Sim)
+
+- **`Exp_Redo_D_E/code/train_errorbar.py`** Test and plot figure of cross-domain adaptation result with different data augmentation method (Empty BG, Real+Sim)
 
 > **Download Data**: We recommend downloading the dataset via the following links. To ensure the reproducibility of your research, please explicitly state the dataset version you used in your paper.
 

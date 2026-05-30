@@ -1,0 +1,6 @@
+# test_D.yaml
+path: Exp_Redo_D_E/data
+train: gt_BS22_Real_bs22_beam14_w10h10_correct-label-bin/images/val
+val: gt_BS22_Real_bs22_beam14_w10h10_correct-label-bin/images/val
+names:
+  0: uav
