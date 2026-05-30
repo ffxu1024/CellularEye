@@ -1,6 +1,6 @@
 """
-Description: Verify the real UAV dataset to ensure the correctness of the data and the alignment between the yolo labels and the images.
-This script mark the label in the relavant images and check if the label is correct. 
+Description: Verify the synthetic UAV dataset to ensure the correctness of the data and the alignment between the YOLO labels and the images.
+This script marks the labels on the corresponding images and checks whether they are correct.
 """
 
 import argparse
@@ -19,7 +19,7 @@ def main():
     output_path = Path(output_path)
     output_path.mkdir(parents=True, exist_ok=True)
     trajectory_files = list(input_path.rglob(f"{args.collection_name}_*.png"))
-    # trajectory_file be like "traj_0_frame_20.png" sort them by frame number
+    # Trajectory files look like "traj_0_frame_20.png"; sort them by frame number.
     trajectory_files = sorted(trajectory_files, key=lambda x: int(x.stem.split("_")[-1]))
     print(f"Found {len(trajectory_files)} trajectory files in {input_path}")
     print(f"Sorted trajectory files: {[f.name for f in trajectory_files]} ...")
@@ -27,7 +27,7 @@ def main():
     label_files = sorted(label_files, key=lambda x: int(x.stem.split("_")[-1]))
     print(f"Found {len(label_files)} label files in {input_path}")
     print(f"Sorted label files: {[f.name for f in label_files]} ...")
-    # ramdom select 8 images and their corresponding labels to visualize
+    # Randomly select 8 images and their corresponding labels to visualize
 
 
     # Plot the first 8 images with their labels
@@ -63,8 +63,8 @@ def main():
     plt.savefig(output_path / f"{args.collection_name}_grid.png")
     plt.show()
 
-    # Plot and save GIF for specific trajectory and label from same collection, for example, 2025_12_04_12_00_2025_12_04_12_02_00_080.png is from collection 2025_12_04_12_00 
-    # Find all trajectory in train dataset
+    # Plot and save a GIF for a specific trajectory and label from the same collection, for example, 2025_12_04_12_00_2025_12_04_12_02_00_080.png is from collection 2025_12_04_12_00.
+    # Find all trajectories in the training dataset
     
 
     # 

@@ -52,7 +52,7 @@ class Config:
                 # [latitude, longitude, altitude]
                 bs_gps = [31.87483116,118.81556122 ,13.75+5.5]
                 # [yaw, pitch, roll]
-                # [z, y, x ] - > ENU # x指向正东时为0
+                # [z, y, x] -> ENU; x is zero when pointing to the east.
                 bs_pose = [47.999, 0.181, -68.856]
             elif bs_id == "22":
                 bs_gps = [31.87482205,118.81460069,13.1+5.5]
@@ -78,7 +78,7 @@ class Config:
 cfg = Config()
 
 
-eps = 1e-12 # 避免log过小
+eps = 1e-12  # Avoid taking the log of values that are too small.
 
 cfg = Config()
 
@@ -91,12 +91,12 @@ def int16_to_float(int16_val):
         int16_val -= 65536
     return int16_val / 32767.0
 
-def read_iq_bin_file(filename, beam_id, symbol_id, rx_id): # 读取IQ数据文件
-    data_file = np.fromfile(filename, dtype='>i2')  # 读取为 int16
+def read_iq_bin_file(filename, beam_id, symbol_id, rx_id):  # Read the IQ data file.
+    data_file = np.fromfile(filename, dtype='>i2')  # Read as int16.
     symbols_idx = np.zeros(512, dtype=np.int32)
-    # 对beam_id取模，得到波束组号
+    # Take beam_id modulo 6 to obtain the beam group index.
     group_id = beam_id // 6
-    # 对beam_id / 5 取余，得到组内索引;命名与beam_id区分
+    # Take the remainder of beam_id modulo 6 to get the intra-group index; keep it distinct from beam_id.
     beam_id_ = beam_id % 6
     for scan_idx in range(512):
         # symbols_idx[scan_idx] = 2*512*30*rx_id +  2*512*beam_id + 2*scan_idx + symbol_id
@@ -111,16 +111,15 @@ def read_iq_bin_file(filename, beam_id, symbol_id, rx_id): # 读取IQ数据文�
     return data_i + 1j*data_q
 
 def process_bin_file(bin_file, beam_id, symbol_id, rx_id):
-    """处理单个bin文件，提取指定beam和symbol的复数数据"""
+    """Process a single bin file and extract the complex data for the given beam and symbol."""
     r_wave = read_iq_bin_file(bin_file, beam_id, symbol_id, rx_id)
     r_wave = r_wave.T 
     RV_wave = np.fft.fftshift(np.fft.ifft(r_wave, axis=1), axes=1)
-    # 转置
-     # shape (1024, 512)
+    # Transpose; resulting shape: (1024, 512)
     return RV_wave
 
 def get_bin_files(bin_dir):
-    """获取指定目录下的所有bin文件"""
+    """Get all bin files under the specified directory."""
     bin_files = []
     for root, dirs, files in os.walk(bin_dir):
         for filename in files:
@@ -130,42 +129,43 @@ def get_bin_files(bin_dir):
 
 # ============ 并行处理辅助函数 ============
 def _process_single_file_wrapper(args):
-    """用于单波束模式的并行包装器"""
+    """Parallel wrapper for single-beam mode."""
     f, beam_id, symbol_id, rx_id = args
     return process_bin_file(f, beam_id, symbol_id, rx_id)
 
 def _process_beam_sequence_wrapper(args):
-    """用于多波束模式的并行包装器：处理一个波束的所有文件并计算dB"""
+    """Parallel wrapper for multi-beam mode: process all files for one beam and compute dB."""
     beam_id, bin_files, symbol_id, rx_id, epsilon = args
     
-    # 处理该波束下的所有文件
+    # Process all files for this beam.
     rv_list = [process_bin_file(f, beam_id, symbol_id, rx_id) for f in bin_files]
     
-    # 在子进程中直接计算 dB，减少主进程计算量和内存传输压力
-    # 注意：这里计算的是绝对dB，归一化需要在主进程拿到所有波束的最大值后进行
+    # Compute dB directly in the worker process to reduce main-process compute and transfer overhead.
+    # Note: this computes absolute dB; normalization should be done in the main process after
+    # collecting the maximum value across all beams.
     db_frames = [20 * np.log10(np.abs(rv) + epsilon) for rv in rv_list]
     
     return db_frames
 # ========================================
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="RV图生成工具（并行加速版）")
+    parser = argparse.ArgumentParser(description="RV map generation tool (parallel-accelerated version)")
     
-    # 基本参数
-    parser.add_argument("--bin_dir", required=True, help="bin文件目录（将自动提取目录结构）", default="data/public_data/2025_10_18_00_00/mmw")
-    parser.add_argument("--output_dir", default="results/plots/rv_plots", help="输出目录")
-    parser.add_argument("--bs_id", default="23", type=str, help="基站索引，用于目录结构")
+    # Basic parameters
+    parser.add_argument("--bin_dir", required=True, help="Directory containing bin files (the directory structure will be inferred automatically)", default="data/public_data/2025_10_18_00_00/mmw")
+    parser.add_argument("--output_dir", default="results/plots/rv_plots", help="Output directory")
+    parser.add_argument("--bs_id", default="23", type=str, help="Base-station index used for the directory structure")
     
-    # 单个组合参数
-    parser.add_argument("--rx_id", default=0, type=int, help="rx id (0或1)", choices=[0, 1])
-    parser.add_argument("--beam_id", default=0, type=int, help="beam id (0-29)画单个子图；30 画 30 个子图")
-    parser.add_argument("--symbol_id", default=0, type=int, help="symbol id (0或1)", choices=[0, 1])
+    # Single-combination parameters
+    parser.add_argument("--rx_id", default=0, type=int, help="RX ID (0 or 1)", choices=[0, 1])
+    parser.add_argument("--beam_id", default=0, type=int, help="Beam ID (0-29) renders a single subplot; 30 renders 30 subplots")
+    parser.add_argument("--symbol_id", default=0, type=int, help="Symbol ID (0 or 1)", choices=[0, 1])
     
-    # 自动模式开关
-    parser.add_argument("--auto", action="store_true", help="启用自动遍历所有组合模式")
+    # Automatic mode switch
+    parser.add_argument("--auto", action="store_true", help="Enable automatic traversal of all combinations")
     
-    # 并行参数
-    parser.add_argument("--workers", type=int, default=None, help="并行进程数，默认使用CPU核心数")
+    # Parallel parameters
+    parser.add_argument("--workers", type=int, default=None, help="Number of worker processes; defaults to the number of CPU cores")
 
     args = parser.parse_args()
 

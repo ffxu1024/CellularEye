@@ -1,6 +1,6 @@
 """
-Description: Verify the real UAV dataset to ensure the correctness of the data and the alignment between the yolo labels and the images.
-This script mark the label in the relavant images and check if the label is correct. 
+Description: Verify the real UAV dataset to ensure the correctness of the data and the alignment between the YOLO labels and the images.
+This script marks the labels on the corresponding images and checks whether they are correct.
 """
 
 import argparse
@@ -23,7 +23,7 @@ def main():
     label_files = list(input_path.rglob(f"{args.collection_name}_*.txt"))
     label_files = sorted(label_files)
     print(f"Found {len(trajectory_files)} trajectory files in {input_path}")
-    # ramdom select 8 images and their corresponding labels to visualize
+    # Randomly select 8 images and their corresponding labels to visualize
 
 
     # Plot the first 8 images with their labels
@@ -59,8 +59,8 @@ def main():
     plt.savefig(output_path / f"{args.collection_name}_grid.png")
     plt.show()
 
-    # Plot and save GIF for specific trajectory and label from same collection, for example, 2025_12_04_12_00_2025_12_04_12_02_00_080.png is from collection 2025_12_04_12_00 
-    # Find all trajectory in train dataset
+    # Plot and save a GIF for a specific trajectory and label from the same collection, for example, 2025_12_04_12_00_2025_12_04_12_02_00_080.png is from collection 2025_12_04_12_00.
+    # Find all trajectories in the training dataset
     
 
     # 

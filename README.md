@@ -47,6 +47,8 @@ The system's sensing parameters are shown in the figure below.
 
 ## Quick Start & Provided Scripts
 
+This is a blind-review version of the project, and the scripts in this repository are still being actively updated.
+
 ### Create and activate the environment**:
    ```bash
    # Create the environment from the provided config file
@@ -86,5 +88,5 @@ python src/save_rd_paper_fig.py --bin_dir /path/to/data/2025_10_18_00_00/mmw --b
 ## License and Citation
 
 * **Code License:** The source code in this repository is licensed under the [MIT License](LICENSE).
-* **Patent Notice:** The underlying algorithms and data processing methods may be subject to pending or granted patents owned by XXX University or XXX Laboratories. The MIT license granted herein applies strictly to the source code and does not convey any express or implied licenses under such patents. For commercial use of the patented methods, please contact the technology transfer office of the institution.
+* **Patent Notice:** The underlying algorithms and data processing methods may be subject to pending or granted patents owned by the relevant rights holders. The MIT license granted herein applies strictly to the source code and does not convey any express or implied licenses under such patents. For commercial use of the patented methods, please contact the appropriate rights holder or technology transfer office.
 * **Dataset License:** The CellularEye dataset is hosted separately on [HuggingFace](https://huggingface.co/datasets/anonymousff/CellularEye_v1.0) and is strictly licensed under the **CC BY-NC 4.0** (Creative Commons Attribution-NonCommercial 4.0 International) license. It is intended for academic research only.

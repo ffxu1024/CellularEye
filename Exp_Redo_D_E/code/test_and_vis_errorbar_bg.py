@@ -5,7 +5,7 @@ import numpy as np
 from ultralytics import YOLO
 from pathlib import Path
 
-# ================= 1. 路径配置 =================
+# ================= 1. Path configuration =================
 PROJECT_DIR = Path('runs/detect/project_DE_errorbar')
 YAML_DIR = Path('Exps/Exp_Redo_D_E/yaml/test')
 
@@ -16,7 +16,7 @@ SCENARIO_MAP = {
 
 METRICS = ['mAP50', 'mAP50-95', 'Precision', 'Recall']
 
-# ================= 2. 评估逻辑 =================
+# ================= 2. Evaluation logic =================
 def run_full_evaluation():
     all_results = []
     val_root = PROJECT_DIR / 'val_results'
@@ -27,7 +27,7 @@ def run_full_evaluation():
         if not test_yaml_path.exists():
             continue
 
-        scenario_key = yaml_name.split('_')[1].split('.')[0]   # "D" 或 "E"
+        scenario_key = yaml_name.split('_')[1].split('.')[0]   # "D" or "E"
         search_configs = [
             {"prefix": "baseline_Seed_*", "model_type": "Baseline"},
             {"prefix": f"{scenario_key}_Seed_*", "model_type": "Ours"},
@@ -66,7 +66,7 @@ def run_full_evaluation():
     return pd.DataFrame(all_results)
 
 
-# ================= 3. 绘图逻辑（Ours 在最右） =================
+# ================= 3. Plotting logic (Ours on the right) =================
 def draw_default_style_plots(df):
     sns.set_theme(style="whitegrid", font_scale=1.3)
     plt.rcParams['font.family'] = 'sans-serif'
@@ -129,7 +129,7 @@ def draw_default_style_plots(df):
     plt.tight_layout()
     plt.subplots_adjust(top=0.88)
 
-    # ====== 只改了这两行：文件名改为 .pdf，添加 format='pdf' ======
+    # Save the figure as PDF.
     save_fig = PROJECT_DIR / 'all_metrics_with_emptybg.pdf'
     plt.savefig(save_fig, dpi=300, bbox_inches='tight', format='pdf')
     print(f"📊 PDF 图表已保存至: {save_fig}")
@@ -137,11 +137,11 @@ def draw_default_style_plots(df):
 
 
 if __name__ == '__main__':
-    print("🚀 开始批量性能评估（包含空背景实验，Ours在最右）...")
+    print("🚀 Starting batch performance evaluation (including the empty background experiment, with Ours on the right)...")
     df_results = run_full_evaluation()
     if not df_results.empty:
         df_results.to_csv(PROJECT_DIR / 'all_seed_results_with_emptybg.csv', index=False)
-        print("🎨 正在生成对比图...")
+        print("🎨 Generating comparison plots...")
         draw_default_style_plots(df_results)
     else:
-        print("❌ 未检测到数据。")
+        print("❌ No data detected.")
