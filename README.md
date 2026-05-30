@@ -75,7 +75,7 @@ python src/save_rd_paper_fig.py --bin_dir /path/to/data/2025_10_18_00_00/mmw --b
 ```
 - **`Exp_Redo_D_E/code/train_errorbar.py`** Train cross-domain adaptation experiment with different data augmentation method (Empty BG, Real+Sim)
 
-- **`Exp_Redo_D_E/code/train_errorbar.py`** Test and plot figure of cross-domain adaptation result with different data augmentation method (Empty BG, Real+Sim)
+- **`Exp_Redo_D_E/code/test_and_vis_errorbar_bg.py`** Test and plot figure of cross-domain adaptation result with different data augmentation method (Empty BG, Real+Sim)
 
 > **Download Data**: We recommend downloading the dataset via the following links. To ensure the reproducibility of your research, please explicitly state the dataset version you used in your paper.
 
