@@ -1,4 +1,5 @@
-# CellularEye Dataset
+# CellularEye Dataset  
+**This is a blind-review version of the project, and the scripts in this repository are still being actively updated.**
 
 > A Large-Scale, Evolving Multimodal Dataset for Environmental Perception Based on Commercial off-the-shelf (COTS) 5G/5G-A gNB Devices
 
@@ -46,8 +47,6 @@ The system's sensing parameters are shown in the figure below.
 
 
 ## Quick Start & Provided Scripts
-
-This is a blind-review version of the project, and the scripts in this repository are still being actively updated.
 
 ### Create and activate the environment**:
    ```bash
