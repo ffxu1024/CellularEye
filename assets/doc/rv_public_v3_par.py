@@ -127,7 +127,7 @@ def get_bin_files(bin_dir):
                 bin_files.append(os.path.join(root, filename))
     return bin_files
 
-# ============ 并行处理辅助函数 ============
+# ============ Parallel processing helpers ============
 def _process_single_file_wrapper(args):
     """Parallel wrapper for single-beam mode."""
     f, beam_id, symbol_id, rx_id = args
@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # ======== 获取bin文件列表 =========
+    # ======== Get the list of bin files =========
     file_dir = os.path.join(args.bin_dir, args.bs_id)
     bin_files = [os.path.join(file_dir, f) for f in os.listdir(file_dir)]
     bin_files.sort(key=lambda p: int(os.path.splitext(os.path.basename(p))[0]))
@@ -184,13 +184,13 @@ if __name__ == "__main__":
 
     # =============================== Visualize =============================       
 
-    if len(beams) == 1: # 单个beam的RV动画
+    if len(beams) == 1: # RV animation for a single beam.
         print(f"Processing single beam {args.beam_id} with parallel execution...")
         
-        # 准备任务参数
+        # Prepare task arguments.
         tasks = [(f, args.beam_id, args.symbol_id, args.rx_id) for f in bin_files]
         
-        # 并行执行
+        # Execute in parallel.
         with ProcessPoolExecutor(max_workers=args.workers) as executor:
             all_rv_matrices = list(tqdm(
                 executor.map(_process_single_file_wrapper, tasks), 
@@ -199,10 +199,10 @@ if __name__ == "__main__":
             ))
 
         # Normalize to dB and relative
-        # 求每帧的 dB（或自然对数），并取全局最大值
+        # Compute the dB for each frame (or natural log) and take the global maximum.
         db_frames = [20 * np.log10(np.abs(rv) + eps) for rv in all_rv_matrices]
         global_max = max(db.max() for db in db_frames)
-        db_rel_frames = [db - global_max for db in db_frames]   # 最大值为 0，其他为 <= 0
+        db_rel_frames = [db - global_max for db in db_frames]   # The maximum is 0; the rest are <= 0.
 
 
         fig, ax = plt.subplots(figsize=(10, 20))
@@ -223,9 +223,9 @@ if __name__ == "__main__":
             ax.set_title(f"{base_title} - Frame {frame+1}/{len(all_rv_matrices)}")
             return img
         
-        # 新文件名格式：G{group}_RX{rx}_B{beam}_S{symbol}.gif
+        # New filename format: G{group}_RX{rx}_B{beam}_S{symbol}.gif
         gif_name = f"rx{args.rx_id}_symbol{args.symbol_id}_beam{args.beam_id}.gif"
-        # 目录结构：output_dir / (bin_dir的最后两级) / bs_id / gif_name
+        # Directory structure: output_dir / (last two levels of bin_dir) / bs_id / gif_name
         bin_tail_parts = Path(args.bin_dir).parts[-2:]
         bin_tail = os.path.join(*bin_tail_parts) if bin_tail_parts else ""
         output_dir = os.path.join(args.output_dir, bin_tail, args.bs_id)
@@ -236,16 +236,16 @@ if __name__ == "__main__":
         ani.save(gif_path, writer=PillowWriter(fps=10))
         plt.close(fig)
 
-    else:  # 多 beam：5 行 6 列，共 30 个子图
+    else:  # Multi-beam: 5 rows x 6 columns, 30 subplots total.
         print("Processing all beams in parallel ...")
         
-        # 准备任务：每个任务处理一个波束的所有文件
+        # Prepare tasks: each task handles all files for one beam.
         tasks = [(beam, bin_files, args.symbol_id, args.rx_id, eps) for beam in beams]
         
         all_db_rel_per_beam = []
         
         with ProcessPoolExecutor(max_workers=args.workers) as executor:
-            # map 会按照 tasks 的顺序返回结果，所以结果顺序对应 beam 0, 1, 2...
+            # map returns results in the same order as tasks, so the order matches beam 0, 1, 2...
             results = list(tqdm(
                 executor.map(_process_beam_sequence_wrapper, tasks),
                 total=len(tasks),
@@ -253,16 +253,16 @@ if __name__ == "__main__":
             ))
             all_db_rel_per_beam = results
 
-        # 计算全局最大
+        # Compute the global maximum.
         global_max = max(db.max() for beam_db in all_db_rel_per_beam for db in beam_db)
-        # 转为相对并裁剪
+        # Convert to relative values and clip.
         all_db_rel_per_beam = [[db - global_max for db in beam_db] for beam_db in all_db_rel_per_beam]
         print("overall max:", max(db.max() for beam_db in all_db_rel_per_beam for db in beam_db))
 
-        # Normalize 到 [0,1]
+        # Normalize to [0, 1].
         global_max = max(db.max() for beam_db in all_db_rel_per_beam for db in beam_db)  # <= 0
         global_min = min(db.min() for beam_db in all_db_rel_per_beam for db in beam_db)  # <= 0
-        norm = Normalize(vmin=global_min, vmax=global_max)   # vmax=0 保证最大为 0
+        norm = Normalize(vmin=global_min, vmax=global_max)   # vmax=0 ensures the maximum is 0.
 
         n_rows, n_cols = 5, 6
         fig, axes = plt.subplots(n_rows, n_cols, figsize=(n_cols*3.0, n_rows*2.5), constrained_layout=True)
@@ -275,18 +275,18 @@ if __name__ == "__main__":
             db0 = all_db_rel_per_beam[i][0]
             img = ax.imshow(db0, cmap='plasma', aspect='auto', origin='lower',
                             extent=[cfg.velocity_seq[0], cfg.velocity_seq[-1], cfg.ranges_seq[0], cfg.ranges_seq[-1]]
-                            , vmin=-140, vmax=0) # norm=norm是归一化的用的
+                            , vmin=-140, vmax=0)  # norm=norm is used for normalization.
 
             ax.set_title(f"Beam {beam}")
             ax.set_xticks([]); ax.set_yticks([])
             imgs.append(img)
             titles.append(ax)
-        # 其余子图隐藏
+        # Hide the remaining subplots.
         for j in range(len(beams), n_rows*n_cols):
             fig.delaxes(axes[j])
 
     # set colorbar 
-        # 共享 colorbar（放在右边）
+        # Shared colorbar (placed on the right).
         cbar = fig.colorbar(imgs[0], ax=axes.tolist(), orientation='vertical', fraction=0.02, pad=0.01)
         cbar.set_label('Relative Magnitude (dB, max=0)')
     

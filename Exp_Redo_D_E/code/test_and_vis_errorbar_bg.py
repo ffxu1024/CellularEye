@@ -41,7 +41,7 @@ def run_full_evaluation():
                 if not weights.exists():
                     continue
 
-                print(f"🔎 正在评估: {folder.name} on {yaml_name}")
+                print(f"🔎 Evaluating: {folder.name} on {yaml_name}")
                 model = YOLO(weights)
                 val_save_name = f"{folder.name}_{yaml_name.replace('.yaml', '')}"
                 metrics = model.val(
@@ -132,7 +132,7 @@ def draw_default_style_plots(df):
     # Save the figure as PDF.
     save_fig = PROJECT_DIR / 'all_metrics_with_emptybg.pdf'
     plt.savefig(save_fig, dpi=300, bbox_inches='tight', format='pdf')
-    print(f"📊 PDF 图表已保存至: {save_fig}")
+    print(f"📊 PDF chart saved to: {save_fig}")
     plt.show()
 
 
