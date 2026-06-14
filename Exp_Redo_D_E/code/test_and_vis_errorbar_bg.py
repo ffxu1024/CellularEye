@@ -28,12 +28,16 @@ def run_full_evaluation():
             continue
 
         scenario_key = yaml_name.split('_')[1].split('.')[0]   # "D" or "E"
+        # search_configs = [
+        #     {"prefix": "baseline_Seed_*", "model_type": "Baseline"},
+        #     {"prefix": f"{scenario_key}_Seed_*", "model_type": "Ours"},
+        #     {"prefix": f"{scenario_key}_emptybg_Seed_*", "model_type": "Empty BG"}
+        # ]
         search_configs = [
-            {"prefix": "baseline_Seed_*", "model_type": "Baseline"},
-            {"prefix": f"{scenario_key}_Seed_*", "model_type": "Ours"},
-            {"prefix": f"{scenario_key}_emptybg_Seed_*", "model_type": "Empty BG"}
+            {"prefix": f"{scenario_key}_baseline_Seed_*", "model_type": "Baseline"},
+            {"prefix": f"{scenario_key}_Seed_*", "model_type": "Real+Sim aug."},
+            {"prefix": f"{scenario_key}_emptybg_Seed_*", "model_type": "BG aug."}
         ]
-
         for cfg in search_configs:
             model_folders = list(PROJECT_DIR.glob(cfg['prefix']))
             for folder in model_folders:
