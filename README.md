@@ -80,8 +80,8 @@ python src/save_rd_paper_fig.py --bin_dir /path/to/data/2025_10_18_00_00/mmw --b
 
 | Version | Release Date | Description | Download Link |
 | :--- | :--- | :--- | :--- |
-| **v1.0** | October 2025 | First public release. Includes IQ, infrared, visible-light from different times of the day. | [Huggingface CellularEye](https://huggingface.co/datasets/anonymousff/CellularEye_v1.0) |
-| **v1.1** | December 2025 | Add: meteorological data and drone target data. | [Huggingface CellularEye](https://huggingface.co/datasets/anonymousff/CellularEye_v1.0) |
+| **v1.0** | October 2025 | First public release. Includes IQ, infrared, visible-light from different times of the day. | [Huggingface CellularEye](https://huggingface.co/datasets/CellularEye-Lab/CellularEye_v1.0) |
+| **v1.1** | December 2025 | Add: meteorological data and drone target data. | [Huggingface CellularEye](https://huggingface.co/datasets/CellularEye-Lab/CellularEye_v1.0) |
 
 ## License and Citation
 
