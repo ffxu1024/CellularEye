@@ -1,0 +1,117 @@
+[
+  {
+    "file": "assets/gifs/sunny_bs23_beam14_rd.gif",
+    "collection": "2026_09_05_05_30",
+    "weather": "sunny",
+    "trajectory": "Traj-1-1",
+    "direction": "Back",
+    "receiver": 23,
+    "beam": 14,
+    "rx_channel": 0,
+    "ofdm_symbol": 0,
+    "kind": "RD",
+    "frames": 52,
+    "dimensions": [
+      800,
+      1600
+    ],
+    "playback_duration_ms": 5200,
+    "sha256": "1ae22d369864fabc4bb3d6e4fa48b001a56a8a293b04bd23620cbd5ab3c55472",
+    "bytes": 35004177,
+    "raw_rd_frames": 52,
+    "first_bin": "2026_09_05_05_32_26_080.bin",
+    "last_bin": "2026_09_05_05_32_46_960.bin"
+  },
+  {
+    "file": "assets/gifs/sunny_bs22_beam14_rd.gif",
+    "collection": "2026_09_05_05_30",
+    "weather": "sunny",
+    "trajectory": "Traj-1-1",
+    "direction": "Back",
+    "receiver": 22,
+    "beam": 14,
+    "rx_channel": 0,
+    "ofdm_symbol": 0,
+    "kind": "RD",
+    "frames": 52,
+    "dimensions": [
+      800,
+      1600
+    ],
+    "playback_duration_ms": 5200,
+    "sha256": "686ee64f6acaf165fae3c7eb7ac7138f67df5b794a943ca0897f37e72b93213c",
+    "bytes": 34343367,
+    "raw_rd_frames": 52,
+    "first_bin": "2026_09_05_05_32_26_080.bin",
+    "last_bin": "2026_09_05_05_32_46_960.bin"
+  },
+  {
+    "file": "assets/gifs/rainy_bs23_beam14_rd.gif",
+    "collection": "2026_09_17_22_54",
+    "weather": "rainy",
+    "trajectory": "Traj-1",
+    "direction": "Back",
+    "receiver": 23,
+    "beam": 14,
+    "rx_channel": 0,
+    "ofdm_symbol": 0,
+    "kind": "RD",
+    "frames": 52,
+    "dimensions": [
+      800,
+      1600
+    ],
+    "playback_duration_ms": 5200,
+    "sha256": "f961d397a33ce5e3f7dc3802dcc60b7a88131c8b6430e1b889898f073eaed559",
+    "bytes": 34778287,
+    "raw_rd_frames": 52,
+    "first_bin": "2026_09_17_22_57_25_200.bin",
+    "last_bin": "2026_09_17_22_57_46_080.bin"
+  },
+  {
+    "file": "assets/gifs/sunny_uav_collection_window.gif",
+    "collection": "2026_09_05_05_30",
+    "weather": "sunny",
+    "trajectory": "Traj-1-1",
+    "direction": "Back",
+    "receiver": null,
+    "beam": null,
+    "rx_channel": null,
+    "ofdm_symbol": null,
+    "kind": "trajectory",
+    "frames": 97,
+    "dimensions": [
+      1000,
+      700
+    ],
+    "playback_duration_ms": 9700,
+    "sha256": "054ebd1f589b43e8da9132946080a6f6f2830f9c7d19b375a2f54bc92978d58f",
+    "bytes": 621257,
+    "raw_rd_frames": 52,
+    "first_bin": "2026_09_05_05_32_26_080.bin",
+    "last_bin": "2026_09_05_05_32_46_960.bin"
+  },
+  {
+    "file": "assets/gifs/rainy_uav_collection_window.gif",
+    "collection": "2026_09_17_22_54",
+    "weather": "rainy",
+    "trajectory": "Traj-1",
+    "direction": "Back",
+    "receiver": null,
+    "beam": null,
+    "rx_channel": null,
+    "ofdm_symbol": null,
+    "kind": "trajectory",
+    "frames": 98,
+    "dimensions": [
+      1000,
+      700
+    ],
+    "playback_duration_ms": 9800,
+    "sha256": "75682c93407a1c4a0494eea5654739dfad0c168a235e5d0e3dafc90aff9cabbb",
+    "bytes": 642559,
+    "raw_rd_frames": 52,
+    "first_bin": "2026_09_17_22_57_25_200.bin",
+    "last_bin": "2026_09_17_22_57_46_080.bin"
+  }
+]

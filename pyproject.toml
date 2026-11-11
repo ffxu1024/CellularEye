@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cellulareye"
+version = "0.1.0.dev0"
+description = "Tools for measured CellularEye sensing data"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3", "scipy>=1.11,<2", "pandas>=2,<3",
+  "matplotlib>=3.8,<4", "Pillow>=10,<13", "PyYAML>=6,<7",
+  "pymap3d>=3,<4", "tqdm>=4,<5"
+]
+
+[tool.setuptools.packages.find]
+include = ["cellulareye*"]
+
+[tool.setuptools.package-data]
+"cellulareye.configs" = ["*.yaml"]
