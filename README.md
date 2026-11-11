@@ -295,7 +295,7 @@ This saves an image grid and an annotated GIF. Images are paired with labels by 
 
 [**Download the real detection benchmark v1.0**](https://github.com/ffxu1024/CellularEye/releases/tag/benchmark-v1.0)
 
-The `.tar.gz` package contains measured RD images and YOLO annotations: **224 training, 71 validation, and 1,141 test samples**. It includes fixed split lists, scenario metadata, named test subsets, and checksums. The package requires no raw `.bin` files.
+The `.tar.gz` package contains measured RD images and YOLO annotations: **224 training, 71 validation, and 1,141 test samples**. It includes fixed split lists, scenario metadata, and named test subsets. The package requires no raw `.bin` files.
 
 ### Download and extract
 
@@ -305,8 +305,6 @@ Run from the repository root:
 mkdir -p datasets
 cd datasets
 curl -fL --retry 3 -o CellularEye-real-benchmark-v1.0.tar.gz https://github.com/ffxu1024/CellularEye/releases/download/benchmark-v1.0/CellularEye-real-benchmark-v1.0.tar.gz
-curl -fL --retry 3 -o SHA256SUMS.txt https://github.com/ffxu1024/CellularEye/releases/download/benchmark-v1.0/SHA256SUMS.txt
-sha256sum -c SHA256SUMS.txt
 tar -xzf CellularEye-real-benchmark-v1.0.tar.gz
 cd ..
 python scripts/prepare_benchmark.py --root datasets/CellularEye-real-benchmark-v1.0
@@ -324,8 +322,7 @@ CellularEye-real-benchmark-v1.0/
 ├── metadata/                # Per-sample sources and processing settings
 ├── configs/                 # Runtime detector configs after setup
 ├── dataset.yaml
-├── README.md
-└── SHA256SUMS.txt
+└── README.md
 ```
 
 ### Read images and labels
