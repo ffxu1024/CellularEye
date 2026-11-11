@@ -22,13 +22,24 @@ def main():
     p.add_argument('--target_type', choices=['uav'], default='uav')
     p.add_argument('--output_dir', default='results/plots')
     p.add_argument('--max_frames', type=int, default=None)
+    p.add_argument('--frame_start', type=int, default=0,
+                   help='Zero-based first frame in the sorted recording list')
+    p.add_argument('--box_width_bins', type=int, default=30)
+    p.add_argument('--box_height_bins', type=int, default=30)
     p.add_argument('--trajectory_animation', action='store_true')
     a = p.parse_args()
     if a.max_frames is not None and a.max_frames < 1:
         p.error('--max_frames must be positive')
+    if a.frame_start < 0:
+        p.error('--frame_start must be non-negative')
+    if not 0 < a.box_width_bins <= 512 or not 0 < a.box_height_bins <= 1024:
+        p.error('Box dimensions must fit within the RD map')
     files, times = load_bin_file(a.collection_path, a.modality, str(a.bs_id))
     if not files:
         p.error('No .bin files found for the selected collection and receiver')
+    if a.frame_start >= len(files):
+        p.error('--frame_start is outside the selected recording')
+    files, times = files[a.frame_start:], times[a.frame_start:]
     if a.max_frames:
         files, times = files[:a.max_frames], times[:a.max_frames]
     cfg = ISACConfig()
@@ -49,7 +60,8 @@ def main():
                 centers.append(coarse_rd_labeling(enu, gt_times, times,
                     stations[str(a.bs_id)], cfg, stations[str(a.tx_bs_id)]))
     animate_rd_maps(rd, times, cfg, pcfg, a, save_name='geometric_reference',
-        precise_indices=centers, box_dims_bins=(30, 30))
+        precise_indices=centers,
+        box_dims_bins=(a.box_width_bins, a.box_height_bins))
     plt.close('all')
 
 

@@ -47,7 +47,7 @@ def load_iq_channel_from_bin_file(filename: Path | str, beam_id: int, symbol_id:
     Load IQ channel data from a binary file for a specific beam, symbol, and receiver.
     """
     validate_iq_bin_file(filename, beam_id, symbol_id, rx_id)
-    data = np.fromfile(filename, dtype='>i2')
+    data = np.memmap(filename, dtype='>i2', mode='r')
     scan_idx = np.arange(512)
     # get group_id from beam_id
     group_id = beam_id // 6

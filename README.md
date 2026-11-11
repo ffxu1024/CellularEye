@@ -22,7 +22,7 @@ Real-world cellular sensing data for noncooperative UAV research
 
 This repository focuses on **reading measurements, visualizing range–Doppler (RD) maps and flight trajectories, and constructing annotated real-data detection datasets**.
 
-> **Data availability.** ScienceDB Version 1 is under review; its assigned DOI and CSTR are not yet registered. Prepared benchmark downloads are not yet published.
+> **Data availability.** ScienceDB Version 1 is under review; its assigned DOI and CSTR are not yet registered. The real detection benchmark is available from [GitHub Releases](https://github.com/ffxu1024/CellularEye/releases/tag/benchmark-v1.0).
 
 ## At a Glance
 
@@ -31,44 +31,49 @@ This repository focuses on **reading measurements, visualizing range–Doppler (
 | Channel measurements | 25.6 GHz mmWave measurements; 30 scanned beams; two receive channels and two OFDM symbols per beam visit |
 | Associated records | UAV positions and motion, RGB/IR video, and meteorological observations; availability varies by collection |
 | Collection scenarios | Multiple flight geometries and Go/Back segments, receiving stations, beams, periods, and weather conditions |
-| Prepared benchmark | Download package pending publication |
+| Real detection benchmark | 224 train / 71 validation / 1,141 test images with YOLO annotations |
 | Toolkit | Binary reading, RD visualization, flight/collection-window visualization, and position-assisted annotation |
 
 The acquisition platform and each downloadable release may cover different resources. Consult the selected release's file list for its actual contents.
 
 ## Visual Gallery
 
-These are **measured UAV-present collections**, displayed over the full range and velocity axes. Every RD GIF contains all **52 recorded frames** for its receiver/beam, without temporal subsampling or RD cropping. Visible target returns vary across frames. The boxes are position-assisted, echo-refined annotations, not model predictions.
+The measured RD clips show continuous UAV-visible intervals over the **full range and velocity axes**. Red display windows follow **coarse RTK geometry**, with a fixed size of 40 × 40 RD bins. Each clip retains every frame within its stated interval; these are selected intervals from longer recordings.
 
 ### Same collection, two receiving stations
 
-**Sunny · Traj-1-1 Back · collection `2026_09_05_05_30` · Beam14 · Rx channel 0 · OFDM symbol 0**
+**Sunny · Traj-1-1 Back · collection `2026_09_05_02_30` · Beam14 · Rx channel 0 · OFDM symbol 0**
+
+Both clips show frames **24–50** (zero-based): **27 consecutive frames** from the same 52-frame acquisition.
 
 | BS23 / Beam14 | BS22 / Beam14 |
 | :---: | :---: |
-| ![Complete sunny BS23 Beam14 RD sequence](assets/gifs/sunny_bs23_beam14_rd.gif) | ![Complete sunny BS22 Beam14 RD sequence](assets/gifs/sunny_bs22_beam14_rd.gif) |
+| ![Sunny BS23 Beam14 continuous UAV echo sequence](assets/gifs/sunny_bs23_beam14_rd.gif) | ![Sunny BS22 Beam14 continuous UAV echo sequence](assets/gifs/sunny_bs22_beam14_rd.gif) |
 
-Both receivers observed the same acquisition period. The BS22 sequence illustrates the structured interference present at that receiving site. Open the [BS23 GIF](assets/gifs/sunny_bs23_beam14_rd.gif) or [BS22 GIF](assets/gifs/sunny_bs22_beam14_rd.gif) for full-resolution viewing.
+The BS22 sequence also shows the structured interference at that receiving site. Open the [BS23 GIF](assets/gifs/sunny_bs23_beam14_rd.gif) or [BS22 GIF](assets/gifs/sunny_bs22_beam14_rd.gif) for full-resolution viewing.
 
 ### Rainy UAV sensing
 
-**Rainy · Traj-1 Back · collection `2026_09_17_22_54` · BS23 / Beam14 · Rx channel 0 · OFDM symbol 0**
+**Rainy · Traj-1 Back · collection `2026_09_18_05_15` · BS23 / Beam14 · Rx channel 0 · OFDM symbol 0**
+
+Frames **22–51**: **30 consecutive frames** from a 52-frame acquisition.
 
 <p align="center">
-  <img src="assets/gifs/rainy_bs23_beam14_rd.gif" alt="Complete rainy BS23 Beam14 UAV-present RD sequence, 52 frames" width="560">
+  <img src="assets/gifs/rainy_bs23_beam14_rd.gif" alt="Rainy BS23 Beam14 continuous UAV echo sequence" width="560">
 </p>
 
-[Open the complete rainy RD GIF](assets/gifs/rainy_bs23_beam14_rd.gif).
+[Open the rainy RD GIF](assets/gifs/rainy_bs23_beam14_rd.gif).
 
 ### Flight trajectory and RF collection window
 
-These previously generated `check_bin` animations show the timestamped UAV flight, base-station positions, and the segment overlapping RF acquisition. The colored **BS Collection** segment marks the collection window within the longer flight; the moving UAV marker shows progression along the recorded trajectory.
+The RTK flight animations show base-station positions, the moving UAV, and the **BS Collection** segment that overlaps RF acquisition. Each animation includes the full recorded flight.
 
-| Sunny · Traj-1-1 Back · 97 flight samples | Rainy · Traj-1 Back · 98 flight samples |
+| Sunny · Traj-1-1 Go | Rainy · Traj-1 Back |
 | :---: | :---: |
-| ![Sunny UAV flight trajectory and RF collection window](assets/gifs/sunny_uav_collection_window.gif) | ![Rainy UAV flight trajectory and RF collection window](assets/gifs/rainy_uav_collection_window.gif) |
+| Collection `2026_09_03_02_00` · 97 flight samples | Collection `2026_09_18_05_15` · 102 flight samples |
+| ![Sunny Go flight and RF collection window](assets/gifs/sunny_uav_collection_window.gif) | ![Rainy Back flight and RF collection window](assets/gifs/rainy_uav_collection_window.gif) |
 
-These animations use accelerated playback. Read the acquisition timestamps rather than interpreting GIF playback duration as measurement duration. The RD sequences and trajectory animations have different sampling rates. Source collection identifiers, frame counts, and checksums are provided in [the gallery manifest](docs/gallery_manifest.json). GIF files retain their original resolution and can take time to load.
+Playback is accelerated. Acquisition timestamps, collection IDs, displayed frame intervals, and file checksums are provided in [the gallery manifest](docs/gallery_manifest.json). RD frames and flight records have different sampling rates. The 40-bin display windows in this gallery are separate from the benchmark's 30-bin detection labels.
 
 ## Testbed
 
@@ -141,9 +146,9 @@ These values use c = 3 × 10⁸ m/s and the nominal timing above. PRI is the rev
 | :--- | :--- | :--- |
 | Dataset homepage | [PML multimodal data portal](http://pmldatanet.com.cn/dataapp/multimodal) | Dataset information and access instructions |
 | Archival dataset, Version 1 | [ScienceDB DOI](https://doi.org/10.57760/sciencedb.018bv) · [CSTR](https://cstr.cn/31253.11.sciencedb.018bv) | **Under review; identifiers not yet registered** |
-| Prepared real-data benchmark | [GitHub Releases](https://github.com/ffxu1024/CellularEye/releases) | **Archive pending publication** |
+| Real detection benchmark v1.0 | [Download archive](https://github.com/ffxu1024/CellularEye/releases/download/benchmark-v1.0/CellularEye-real-benchmark-v1.0.tar.gz) · [Release notes](https://github.com/ffxu1024/CellularEye/releases/tag/benchmark-v1.0) | 1,436 images and labels · approximately 586 MB |
 
-For detection experiments, use the prepared benchmark when available. To inspect channel measurements or construct your own dataset, download the required raw collections through the dataset portal. Raw recordings and processed benchmark images are separate downloads.
+For detection experiments, download the prepared real benchmark. To inspect channel measurements or construct your own dataset, download the required raw collections through the dataset portal. Raw recordings and processed benchmark images are separate downloads.
 
 ### Raw collection structure
 
@@ -200,7 +205,7 @@ python -m pip install -e .
 
 ### RD visualization
 
-The existing public figure script accepts a raw collection's `mmw` directory:
+The figure script accepts a raw collection's `mmw` directory:
 
 ```bash
 python src/save_rd_paper_fig.py \
@@ -235,13 +240,26 @@ python scripts/check_bin.py \
   --max_frames 20
 ```
 
-The existing workflow writes plots and RD GIFs under `results/plots/`. Use `--trajectory_animation` to save the UAV trajectory GIF and `--max_frames` to limit the preview. Omit the latter to process all frames; this can require substantial memory for long collections. Change the destination with `--output_dir`.
+To reproduce the sunny gallery interval, select the corresponding collection and display window:
+
+```bash
+python scripts/check_bin.py \
+  --collection_path /path/to/2026_09_05_02_30 \
+  --bs_id 23 --beam_id 14 \
+  --frame_start 24 --max_frames 27 \
+  --box_width_bins 40 --box_height_bins 40 \
+  --output_dir results/gallery_bs23
+```
+
+Use `--bs_id 22` for the companion receiver. The rainy gallery uses collection `2026_09_18_05_15`, `--frame_start 22`, and `--max_frames 30`. Omit frame limits to render the complete recording.
+
+The workflow writes plots and RD GIFs under `results/plots/`. Use `--trajectory_animation` to save the UAV trajectory GIF and `--max_frames` to limit the preview. Omit the latter to process all frames; this can require substantial memory for long collections. Change the destination with `--output_dir`.
 
 ### Real-data generation
 
 The real-data generator uses the position-assisted annotation workflow: associate UAV records with radio timestamps, compute geometric references, refine centers using local echoes, and export RD images and YOLO labels.
 
-Generate a preview with:
+Export real-data images and labels with:
 
 ```bash
 python scripts/generate_real_dataset.py \
@@ -275,7 +293,71 @@ This saves an image grid and an annotated GIF. Images are paired with labels by 
 
 ## Benchmark
 
-Prepared benchmark archives are not yet published. Available downloads will be listed on [GitHub Releases](https://github.com/ffxu1024/CellularEye/releases). In the meantime, use the raw-data portal and the real-data generation workflow above to build your own datasets.
+[**Download the real detection benchmark v1.0**](https://github.com/ffxu1024/CellularEye/releases/tag/benchmark-v1.0)
+
+The `.tar.gz` package contains measured RD images and YOLO annotations: **224 training, 71 validation, and 1,141 test samples**. It includes fixed split lists, scenario metadata, named test subsets, and checksums. The package requires no raw `.bin` files.
+
+### Download and extract
+
+Run from the repository root:
+
+```bash
+mkdir -p datasets
+cd datasets
+curl -fL --retry 3 -o CellularEye-real-benchmark-v1.0.tar.gz https://github.com/ffxu1024/CellularEye/releases/download/benchmark-v1.0/CellularEye-real-benchmark-v1.0.tar.gz
+curl -fL --retry 3 -o SHA256SUMS.txt https://github.com/ffxu1024/CellularEye/releases/download/benchmark-v1.0/SHA256SUMS.txt
+sha256sum -c SHA256SUMS.txt
+tar -xzf CellularEye-real-benchmark-v1.0.tar.gz
+cd ..
+python scripts/prepare_benchmark.py --root datasets/CellularEye-real-benchmark-v1.0
+```
+
+The setup command creates `configs/all.yaml` and one YAML plus image list per test subset. Runtime paths are resolved to the extracted dataset's location. Re-run this command after moving the dataset.
+
+### Package structure
+
+```text
+CellularEye-real-benchmark-v1.0/
+├── images/{train,val,test}/
+├── labels/{train,val,test}/
+├── splits/                  # Fixed splits and test subsets
+├── metadata/                # Per-sample sources and processing settings
+├── configs/                 # Runtime detector configs after setup
+├── dataset.yaml
+├── README.md
+└── SHA256SUMS.txt
+```
+
+### Read images and labels
+
+```python
+from pathlib import Path
+import numpy as np
+from PIL import Image
+
+root = Path("datasets/CellularEye-real-benchmark-v1.0")
+image_path = root / (root / "splits/reference.txt").read_text().splitlines()[0]
+label_path = root / "labels/test" / image_path.with_suffix(".txt").name
+image = np.asarray(Image.open(image_path))
+boxes = np.loadtxt(label_path, ndmin=2)
+print(image.shape, boxes)  # (1024, 512), class/x_center/y_center/width/height
+```
+
+Images are 8-bit grayscale PNGs with velocity on the horizontal axis and increasing range upward. Labels use normalized image coordinates: `0 x_center y_center width height`. Box widths and heights are 30 RD bins. Training, validation, and test use disjoint collection IDs; the original image and label bytes are preserved.
+
+| Test subset | Flight / condition | Images |
+| :--- | :--- | ---: |
+| `reference` | Sunny Traj-1-1 Back, BS23/B14 | 66 |
+| `trajectory_traj11_go` | Sunny Traj-1-1 Go | 117 |
+| `trajectory_traj3_back` | Sunny Traj-3 Back | 425 |
+| `trajectory_traj4_go` | Sunny Traj-4 Go | 54 |
+| `weather_traj11_back` | Rainy Traj-1-1 Back | 122 |
+| `weather_traj1_back` | Rainy Traj-1 Back | 134 |
+| `station_bs22` | Sunny Traj-1-1 Back, BS22/B14 | 58 |
+| `beam13` | Sunny Traj-1-1 Back, BS23/B13 | 63 |
+| `time_2025_traj11_go` | Sunny 2025-12 Traj-1-1 Go | 102 |
+
+Unspecified receivers and beams are BS23/B14. The acquisition-period subset also differs in flight direction from the reference. See the archive README for full annotation and processing conventions.
 
 ## Usage Terms
 
