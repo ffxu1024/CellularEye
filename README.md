@@ -85,6 +85,12 @@ CellularEye is collected on a **228 m × 70 m outdoor testbed** at Purple Mounta
 
 <p align="center"><em>Testbed layout and acquisition equipment at Purple Mountain Laboratories.</em></p>
 
+| BS23: 30 beam steering directions | Four-site antenna orientations |
+| :---: | :---: |
+| ![Thirty beam steering directions at BS23 over the testbed](assets/img/bs23-30-beams.png) | ![Panel-normal directions of BS21, BS22, BS23, and BS24 over the testbed](assets/img/four-site-orientations.png) |
+
+The left panel shows the 30 beam steering directions at BS23; the right panel shows the antenna panel-normal directions at BS21–BS24. The cones illustrate beam geometry rather than measured coverage boundaries. Open the [30-beam view](assets/img/bs23-30-beams.png) or [four-site view](assets/img/four-site-orientations.png) for a larger image.
+
 BS23 provides mmWave illumination, with separate transmit and receive AAUs supporting simultaneous illumination and echo acquisition. The current archived mmWave measurements are organized under receiving sites BS22 and BS23; the four-site deployment shown above describes the platform. Available records vary by collection. Sub-6 GHz measurements are reserved for a subsequent release.
 
 ## mmWave Signal and Radar Parameters
