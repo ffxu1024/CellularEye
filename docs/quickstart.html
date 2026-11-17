@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Get started | CellularEye</title><meta name="description" content="Read measurements, inspect flights, and export real-data annotations."><meta name="theme-color" content="#122d46"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="site.css"><script src="site.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html" aria-label="CellularEye home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 24a19 19 0 0 1 19-19M5 16A11 11 0 0 1 16 5M6 6l19 19"/><circle cx="25" cy="25" r="3"/></svg>CellularEye</a>
+<nav aria-label="Main navigation"><a href="index.html#testbed">Testbed</a><a href="index.html#gallery">Gallery</a><a href="quickstart.html" aria-current="page">Documentation</a><a href="https://doi.org/10.57760/sciencedb.018bv">Dataset <span aria-hidden="true">↗</span></a><a class="nav-code" href="https://github.com/ffxu1024/CellularEye">GitHub <span aria-hidden="true">↗</span></a></nav></div></header><div class="docs-layout"><aside class="docs-nav"><p class="eyebrow">DOCUMENTATION</p><nav aria-label="Documentation"><a href="quickstart.html" aria-current="page">Get started</a><a href="downloads.html" >Download the data</a><a href="data-format.html" >Data format</a><a href="parameters.html" >Signal & radar parameters</a><a href="benchmark.html" >Detection benchmark</a><a href="terms.html" >Usage terms</a></nav><a class="back-home" href="index.html">← Project overview</a></aside><main id="main" class="doc-content"><p class="eyebrow">CELLULAREYE TOOLKIT</p><h1 id="get-started">Get started</h1>
+<p>Choose the workflow that matches your task:</p>
+<div class="table-scroll"><table><thead><tr><th>I want to…</th><th>Start here</th></tr></thead><tbody><tr><td>Use prepared detection images and labels</td><td><a href="benchmark.html">Benchmark</a></td></tr><tr><td>Render an RD figure from a raw collection</td><td><a href="#rd-visualization">RD visualization</a></td></tr><tr><td>Inspect flight trajectories and collection windows</td><td><a href="#trajectory-and-collection-window-visualization">Trajectory and collection-window visualization</a></td></tr><tr><td>Generate a dataset from my selected real collections</td><td><a href="#real-data-generation">Real-data generation</a></td></tr></tbody></table></div>
+<h2 id="installation">Installation</h2>
+<pre><code class="language-bash">git clone https://github.com/ffxu1024/CellularEye.git
+cd CellularEye
+conda create -n cellulareye python=3.11
+conda activate cellulareye
+python -m pip install -r requirements-tested.txt
+python -m pip install -e .</code></pre>
+<p><code>requirements-tested.txt</code> records the dependency versions tested in a clean Python 3.11 environment. The editable installation installs this toolkit from <code>pyproject.toml</code>. The toolkit requires Python 3.11 or newer. No GPU is required for these tools.</p>
+<h2 id="rd-visualization">RD visualization</h2>
+<p>The figure script accepts a raw collection's <code>mmw</code> directory:</p>
+<pre><code class="language-bash">python src/save_rd_paper_fig.py \
+  --bin_dir /path/to/2025_12_09_12_00/mmw \
+  --bs_id 23 \
+  --beam_id 14 \
+  --rx_id 0 \
+  --symbol_id 0 \
+  --frame_id 0 \
+  --output_dir results/rd</code></pre>
+<p>Select <code>--beam_id 30</code> in this figure script to render all 30 beams. This value is a visualization option, not a valid beam index for the binary reader. Frames are selected by their zero-based position in the sorted file list.</p>
+<p>See the <a href="index.html#gallery">visual gallery</a> for selected continuous RD intervals and full-flight collection-window animations.</p>
+<h2 id="trajectory-and-collection-window-visualization">Trajectory and collection-window visualization</h2>
+<p>The <code>check_bin.py</code> workflow renders RD sequences and a 3D UAV trajectory with the RF collection segment highlighted. Collections without UAV records can still be used for RD animation.</p>
+<p>From the repository root, run:</p>
+<pre><code class="language-bash">python scripts/check_bin.py \
+  --collection_path /path/to/2025_12_09_12_00 \
+  --modality mmw \
+  --bs_id 23 \
+  --beam_id 14 \
+  --rx_id 0 \
+  --symbol_id 0 \
+  --trajectory_animation \
+  --max_frames 20</code></pre>
+<p>To reproduce the sunny gallery interval, select the corresponding collection and display window:</p>
+<pre><code class="language-bash">python scripts/check_bin.py \
+  --collection_path /path/to/2026_09_05_02_30 \
+  --bs_id 23 --beam_id 14 \
+  --frame_start 24 --max_frames 27 \
+  --box_width_bins 40 --box_height_bins 40 \
+  --output_dir results/gallery_bs23</code></pre>
+<p>Use <code>--bs_id 22</code> for the companion receiver. The rainy gallery uses collection <code>2026_09_18_05_15</code>, <code>--frame_start 22</code>, and <code>--max_frames 30</code>. Omit frame limits to render the complete recording.</p>
+<p>The workflow writes plots and RD GIFs under <code>results/plots/</code>. Use <code>--trajectory_animation</code> to save the UAV trajectory GIF and <code>--max_frames</code> to limit the preview. Omit the latter to process all frames; this can require substantial memory for long collections. Change the destination with <code>--output_dir</code>.</p>
+<h2 id="real-data-generation">Real-data generation</h2>
+<p>The real-data generator uses the position-assisted annotation workflow: associate UAV records with radio timestamps, compute geometric references, refine centers using local echoes, and export RD images and YOLO labels.</p>
+<p>Export real-data images and labels with:</p>
+<pre><code class="language-bash">python scripts/generate_real_dataset.py \
+  --input_dir /path/to/collection_parent \
+  --output_dir datasets/real_uav \
+  --bs_id 23 \
+  --beam_id 14 \
+  --rx_id 0 \
+  --symbol_id 0 \
+  --width_bin 30 \
+  --height_bin 30 \
+  --split train \
+  --max_frames 20</code></pre>
+<p><code>--input_dir</code> contains collection directories. All selected collections are exported to <code>--split</code> (<code>train</code>, <code>val</code>, or <code>test</code>), without splitting adjacent frames automatically. Use separate collection groups for training, validation, and testing. The output directory gains a <code>_bs23_beam14_w30h30</code>-style suffix and contains <code>dataset.yaml</code> plus <code>generation.json</code> with the invocation, settings, sample origins, and counts. Transmitter BS23 is the default; change it explicitly with <code>--tx_bs_id</code> when appropriate. For multi-UAV records, select <code>--target_id</code>. Box dimensions are measured in RD bins. Position-assisted boxes are derived detection annotations; their dimensions are configurable.</p>
+<p>RF timestamps in the current release use TAI and RTK records use UTC; their alignment uses a 37-second subtraction. The reader retains the existing zero-offset exception for January–May 2026 legacy files; use actual timestamp provenance when handling those older captures. Station geometry and transmitter/receiver roles must also match the selected collection.</p>
+<p>For the fixed benchmark, use the released images, labels, and split manifests. Running a configurable generator on arbitrary collections does not reproduce the benchmark automatically.</p>
+<h2 id="preview-generated-labels">Preview generated labels</h2>
+<pre><code class="language-bash">python src/visualize_real_dataset.py \
+  --input_dir datasets/real_uav_bs23_beam14_w30h30 \
+  --output_dir results/labels</code></pre>
+<p>This saves an image grid and an annotated GIF. Images are paired with labels by split and filename, including datasets with fewer than eight images.</p><div class="doc-bottom"><a href="https://github.com/ffxu1024/CellularEye/blob/main/docs/quickstart.md">View source on GitHub ↗</a><a href="https://github.com/ffxu1024/CellularEye/issues">Report an issue ↗</a></div></main><aside class="page-toc"><p class="eyebrow">ON THIS PAGE</p><a href="#installation">Installation</a><a href="#rd-visualization">RD visualization</a><a href="#trajectory-and-collection-window-visualization">Trajectory and collection-window visualization</a><a href="#real-data-generation">Real-data generation</a><a href="#preview-generated-labels">Preview generated labels</a></aside></div><footer class="site-footer"><div><a class="brand" href="index.html">CellularEye</a><p>Real-world measurements for integrated sensing and communication.</p></div><div><a href="https://doi.org/10.57760/sciencedb.018bv">ScienceDB</a><a href="https://github.com/ffxu1024/CellularEye">GitHub</a><a href="http://pmldatanet.com.cn/dataapp/multimodal">PML portal</a><a href="terms.html">Usage terms</a></div></footer></body></html>
