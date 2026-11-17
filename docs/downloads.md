@@ -27,4 +27,3 @@ The [PML multimodal data portal](http://pmldatanet.com.cn/dataapp/multimodal) pr
 | Read detection images and labels | GitHub benchmark archive | [Benchmark](benchmark.md) |
 
 Record availability varies by collection. The four-site layout describes the platform; the current archived mmWave measurement folders use receiving-site IDs BS22 and BS23. Sub-6 GHz measurements are reserved for a subsequent release. Follow the usage terms on the selected distribution page.
-

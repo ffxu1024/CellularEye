@@ -32,4 +32,3 @@ The stored samples are a range-domain representation of CSI after acquisition-si
 ## Timestamp alignment
 
 RF filenames use TAI and UAV RTK records use UTC. The toolkit subtracts 37 seconds for the current release and retains its legacy zero-offset exception for January–May 2026 files. Use the actual timestamp provenance for those older captures.
-
