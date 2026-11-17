@@ -8,3 +8,5 @@
 - [Signal & radar parameters](parameters.md) — Acquisition settings, hardware specifications, and RD coordinates.
 - [Detection benchmark](benchmark.md) — Fixed splits, labels, scenario subsets, and reading examples.
 - [Usage terms](terms.md) — Source-code licensing, dataset terms, and patent notice.
+
+[Published-paper citation](https://ffxu1024.github.io/CellularEye/#citation) · [BibTeX](CITATION.bib)

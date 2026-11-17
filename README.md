@@ -10,7 +10,7 @@
 [![Python](https://img.shields.io/badge/python-3.11%2B-3776ab)](pyproject.toml)
 [![License](https://img.shields.io/badge/code-MIT-8a7043)](LICENSE)
 
-[Project Website](https://ffxu1024.github.io/CellularEye/) · [Documentation](https://ffxu1024.github.io/CellularEye/quickstart.html) · [Dataset](https://doi.org/10.57760/sciencedb.018bv) · [Benchmark](https://github.com/ffxu1024/CellularEye/releases/tag/benchmark-v1.0) · [Issues](https://github.com/ffxu1024/CellularEye/issues)
+[Project Website](https://ffxu1024.github.io/CellularEye/) · [Documentation](https://ffxu1024.github.io/CellularEye/quickstart.html) · [Dataset](https://doi.org/10.57760/sciencedb.018bv) · [Benchmark](https://github.com/ffxu1024/CellularEye/releases/tag/benchmark-v1.0) · [Paper](https://doi.org/10.1007/s11432-026-4923-1) · [Citation](#citation) · [Issues](https://github.com/ffxu1024/CellularEye/issues)
 
 <img src="assets/img/multi-modal-en.png" alt="CellularEye measurement platform and data modalities" width="900">
 
@@ -61,6 +61,27 @@ For complete commands and data conventions, use the documentation:
 - [Benchmark download and reading](https://ffxu1024.github.io/CellularEye/benchmark.html)
 
 The guides are also available [inside this repository](docs/README.md).
+
+## Citation
+
+If you use CellularEye in your research, please cite the published [PML-CellularEye paper](https://doi.org/10.1007/s11432-026-4923-1):
+
+```bibtex
+@article{zhong2026pmlcellulareye,
+  author  = {Zhong, Ziguo and Huang, Yongming and Hou, Huazhou and
+             Xu, Fanfei and Feng, Haisheng and Liu, Shengheng and You, Xiaohu},
+  title   = {{PML-CellularEye}: a multi-modal experimental dataset for {6G} {ISAC} research},
+  journal = {Science China Information Sciences},
+  volume  = {69},
+  number  = {6},
+  pages   = {167301},
+  year    = {2026},
+  doi     = {10.1007/s11432-026-4923-1},
+  url     = {https://doi.org/10.1007/s11432-026-4923-1}
+}
+```
+
+[Download BibTeX](docs/CITATION.bib).
 
 ## License & support
 
