@@ -6,6 +6,8 @@ on:
     paths:
       - docs/**
       - assets/**
+      - scripts/real_dataset_metadata.yaml
+      - scripts/build_collection_catalog.py
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -29,11 +31,16 @@ jobs:
         uses: actions/checkout@v6
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Build collection catalog
+        run: |
+          python -m pip install PyYAML==6.0.3
+          python scripts/build_collection_catalog.py
       - name: Assemble static site
         run: |
           mkdir -p _site
           cp -R docs/. _site/
           cp -R assets _site/assets
+          cp scripts/real_dataset_metadata.yaml _site/real_dataset_metadata.yaml
           touch _site/.nojekyll
       - name: Upload website
         uses: actions/upload-pages-artifact@v4

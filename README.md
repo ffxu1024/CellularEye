@@ -26,6 +26,7 @@ This repository provides tools for reading binary measurements, visualizing rang
 | :--- | :--- |
 | **Raw dataset — primary source** | [Published on ScienceDB](https://doi.org/10.57760/sciencedb.018bv) · approximately 2.68 TB before compression |
 | **Real detection benchmark** | [GitHub Release v1.0](https://github.com/ffxu1024/CellularEye/releases/tag/benchmark-v1.0) · approximately 586 MB · 224 train / 71 validation / 1,141 test images |
+| **Collection metadata** | [Browse collection conditions](https://ffxu1024.github.io/CellularEye/collections.html) · [Public YAML](scripts/real_dataset_metadata.yaml) |
 | Auxiliary portal | [PML multimodal data portal](http://pmldatanet.com.cn/dataapp/multimodal) |
 
 The benchmark contains RD images and YOLO labels and requires no raw `.bin` files. See the [download guide](https://ffxu1024.github.io/CellularEye/downloads.html) for the available resources.

@@ -27,3 +27,7 @@ The [PML multimodal data portal](http://pmldatanet.com.cn/dataapp/multimodal) pr
 | Read detection images and labels | GitHub benchmark archive | [Benchmark](benchmark.md) |
 
 Record availability varies by collection. The four-site layout describes the platform; the current archived mmWave measurement folders use receiving-site IDs BS22 and BS23. Sub-6 GHz measurements are reserved for a subsequent release. Follow the usage terms on the selected distribution page.
+
+## Collection metadata
+
+Use the [collection catalog](collections.md) to find the public collections by UAV target or target-free background, weather, trajectory, and Go/Back direction. The [YAML metadata](../scripts/real_dataset_metadata.yaml) are maintained in the GitHub repository, separately from the raw measurement archives on ScienceDB.

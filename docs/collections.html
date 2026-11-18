@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Collection catalog | CellularEye</title><meta name="description" content="Find public collections by target, weather, trajectory, and direction."><meta name="theme-color" content="#122d46"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="site.css"><link rel="stylesheet" href="collections.css"><script src="site.js" defer></script><script src="collections.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html" aria-label="CellularEye home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 24a19 19 0 0 1 19-19M5 16A11 11 0 0 1 16 5M6 6l19 19"/><circle cx="25" cy="25" r="3"/></svg>CellularEye</a>
+<nav aria-label="Main navigation"><a href="index.html#testbed">Testbed</a><a href="index.html#gallery">Gallery</a><a href="quickstart.html" aria-current="page">Documentation</a><a href="https://doi.org/10.57760/sciencedb.018bv">Dataset <span aria-hidden="true">↗</span></a><a class="nav-code" href="https://github.com/ffxu1024/CellularEye">GitHub <span aria-hidden="true">↗</span></a></nav></div></header><div class="docs-layout"><aside class="docs-nav"><p class="eyebrow">DOCUMENTATION</p><nav aria-label="Documentation"><a href="quickstart.html" >Get started</a><a href="downloads.html" >Download the data</a><a href="collections.html" aria-current="page">Collection catalog</a><a href="data-format.html" >Data format</a><a href="parameters.html" >Signal & radar parameters</a><a href="benchmark.html" >Detection benchmark</a><a href="terms.html" >Usage terms</a></nav><a class="back-home" href="index.html">← Project overview</a></aside><main id="main" class="doc-content"><p class="eyebrow">CELLULAREYE TOOLKIT</p><h1 id="collection-catalog">Collection catalog</h1>
+<p>Find a collection in the public raw-data archive release by target type, weather, trajectory, or flight direction. The metadata are maintained in the GitHub repository; download the recordings from <a href="https://doi.org/10.57760/sciencedb.018bv">ScienceDB</a>.</p>
+<p class="catalog-downloads"><a href="real_dataset_metadata.yaml" download>Download YAML ↓</a><a href="collections.csv" download>Download CSV ↓</a><a href="collections.json" download>Download JSON ↓</a><a href="https://github.com/ffxu1024/CellularEye/blob/main/scripts/real_dataset_metadata.yaml">View metadata on GitHub ↗</a></p>
+<p class="note">Target labels describe the collection type, not echo visibility in every frame. Background collections have no assigned UAV trajectory. “Not specified” means the metadata do not establish that field. Tx/Rx list the configured sites; individual file availability can vary.</p>
+<!-- COLLECTIONS:START -->
+<div class="catalog-stats"><div><strong>116</strong><span>Public collections</span></div><div><strong>85</strong><span>UAV target</span></div><div><strong>31</strong><span>Target-free background</span></div></div>
+<p class="catalog-weather">Sunny: 96 · Rainy: 20</p>
+<div class="catalog-controls"><label class="catalog-search">Find a collection<input id="collection-search" type="search" placeholder="Collection ID, airport, or UAV model" autocomplete="off"></label>
+<label>Target<select id="collection-target"><option value="">All</option><option value="uav">UAV target</option><option value="background">Target-free background</option></select></label>
+<label>Weather<select id="collection-weather"><option value="">All</option><option value="sunny">Sunny</option><option value="rainy">Rainy</option></select></label>
+<label>Trajectory<select id="collection-trajectory"><option value="">All</option><option value="Traj-1">Traj-1</option><option value="Traj-1-1">Traj-1-1</option><option value="Traj-3">Traj-3</option><option value="Traj-4">Traj-4</option></select></label>
+<label>Direction<select id="collection-direction"><option value="">All</option><option value="Go">Go</option><option value="Back">Back</option><option value="Go_then_Back">Go → Back</option></select></label>
+<button id="collection-reset" type="button">Reset</button></div>
+<p id="collection-count" class="catalog-count" role="status" aria-live="polite">Showing 116 of 116 collections</p>
+<div class="catalog-table-wrap" tabindex="0" role="region" aria-label="Collection metadata table"><table class="catalog-table"><thead><tr><th scope="col">Collection ID</th><th scope="col">Target</th><th scope="col">Weather</th><th scope="col">Trajectory</th><th scope="col">Direction</th><th scope="col">Airport</th><th scope="col">Tx</th><th scope="col">Rx (configured)</th></tr></thead><tbody>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2025_12_05_00_00   ">
+<th scope="row"><code>2025_12_05_00_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2025_12_05_12_00 airportb dji matrice 3td traj-1-1-2025">
+<th scope="row"><code>2025_12_05_12_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2025_12_06_00_00   ">
+<th scope="row"><code>2025_12_06_00_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2025_12_06_12_00 airportb dji matrice 3td traj-1-1-2025">
+<th scope="row"><code>2025_12_06_12_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2025_12_06_18_00   ">
+<th scope="row"><code>2025_12_06_18_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2025_12_07_06_00   ">
+<th scope="row"><code>2025_12_07_06_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2025_12_07_12_00 airportb dji matrice 3td traj-1-1-2025">
+<th scope="row"><code>2025_12_07_12_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2025_12_08_00_00   ">
+<th scope="row"><code>2025_12_08_00_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2025_12_08_12_00 airportb dji matrice 3td traj-1-1-2025">
+<th scope="row"><code>2025_12_08_12_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2025_12_09_00_00   ">
+<th scope="row"><code>2025_12_09_00_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2025_12_09_12_00 airportb dji matrice 3td traj-1-1-2025">
+<th scope="row"><code>2025_12_09_12_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2025_12_09_18_00   ">
+<th scope="row"><code>2025_12_09_18_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2025_12_10_06_00   ">
+<th scope="row"><code>2025_12_10_06_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2025_12_10_12_00 airportb dji matrice 3td traj-1-1-2025">
+<th scope="row"><code>2025_12_10_12_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_02_01_00 airportb dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_02_01_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_02_02_00 airportb dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_02_02_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_02_03_00 airportb dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_02_03_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_02_04_00 airportb dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_02_04_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_02_05_00 airportb dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_02_05_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_02_12_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_02_12_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_02_15_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_02_15_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_02_16_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_02_16_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_02_17_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_02_17_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_02_19_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_02_19_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_02_22_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_02_22_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_03_00_00   ">
+<th scope="row"><code>2026_09_03_00_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_03_01_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_03_01_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_03_02_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_03_02_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_03_03_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_03_03_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_03_05_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_03_05_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_03_06_00   ">
+<th scope="row"><code>2026_09_03_06_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Go" data-search="2026_09_03_08_00 airportb dji matrice 3td traj-1-1-202609">
+<th scope="row"><code>2026_09_03_08_00</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Go</td>
+<td>AirportB</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_05_00_00   ">
+<th scope="row"><code>2026_09_05_00_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_01_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_01_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_02_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_02_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_03_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_03_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_04_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_04_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_05_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_05_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_05_06_00   ">
+<th scope="row"><code>2026_09_05_06_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_07_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_07_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_08_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_08_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_09_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_09_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_05_10_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_05_10_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_05_14_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_05_14_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_05_15_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_05_15_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_05_17_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_05_17_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_05_18_00   ">
+<th scope="row"><code>2026_09_05_18_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_05_19_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_05_19_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_05_20_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_05_20_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_05_21_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_05_21_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_05_22_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_05_22_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_05_23_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_05_23_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_06_00_00   ">
+<th scope="row"><code>2026_09_06_00_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_01_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_01_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_02_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_02_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_03_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_03_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_04_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_04_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_05_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_05_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_06_06_00   ">
+<th scope="row"><code>2026_09_06_06_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_07_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_07_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_08_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_08_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_10_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_10_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-3" data-direction="Back" data-search="2026_09_06_11_30 airportc dji matrice 3td traj-3">
+<th scope="row"><code>2026_09_06_11_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-3</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_06_14_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_06_14_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_06_15_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_06_15_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_06_16_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_06_16_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_06_17_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_06_17_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_06_18_00   ">
+<th scope="row"><code>2026_09_06_18_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_06_19_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_06_19_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_06_22_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_06_22_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_06_23_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_06_23_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_07_00_00   ">
+<th scope="row"><code>2026_09_07_00_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go" data-search="2026_09_07_01_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_01_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_07_02_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_02_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go" data-search="2026_09_07_03_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_03_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_07_04_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_04_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go" data-search="2026_09_07_05_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_05_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_07_06_00   ">
+<th scope="row"><code>2026_09_07_06_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go" data-search="2026_09_07_07_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_07_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_07_08_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_08_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go" data-search="2026_09_07_09_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_09_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_07_10_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_10_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go" data-search="2026_09_07_11_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_11_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_07_13_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_13_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_07_14_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_14_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_07_15_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_15_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Back" data-search="2026_09_07_16_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_16_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_07_17_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_17_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_07_18_00   ">
+<th scope="row"><code>2026_09_07_18_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_07_19_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_19_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="sunny" data-trajectory="Traj-4" data-direction="Go_then_Back" data-search="2026_09_07_21_30 airportc dji matrice 3td traj-4">
+<th scope="row"><code>2026_09_07_21_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Sunny</td>
+<td>Traj-4</td>
+<td>Go → Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_17_15_12 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_17_15_12</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_17_15_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_17_15_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_17_15_45 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_17_15_45</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_17_16_15 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_17_16_15</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_17_16_30 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_17_16_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="rainy" data-trajectory="" data-direction="" data-search="2026_09_17_18_00   ">
+<th scope="row"><code>2026_09_17_18_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Rainy</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="rainy" data-trajectory="" data-direction="" data-search="2026_09_17_19_00   ">
+<th scope="row"><code>2026_09_17_19_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Rainy</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1-1" data-direction="Back" data-search="2026_09_17_22_04 airportc dji matrice 3td traj-1-1">
+<th scope="row"><code>2026_09_17_22_04</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1" data-direction="Back" data-search="2026_09_17_22_54 airportc dji matrice 3td traj-1">
+<th scope="row"><code>2026_09_17_22_54</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1" data-direction="Back" data-search="2026_09_17_23_36 airportc dji matrice 3td traj-1">
+<th scope="row"><code>2026_09_17_23_36</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="rainy" data-trajectory="" data-direction="" data-search="2026_09_18_01_00   ">
+<th scope="row"><code>2026_09_18_01_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Rainy</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="rainy" data-trajectory="" data-direction="" data-search="2026_09_18_02_00   ">
+<th scope="row"><code>2026_09_18_02_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Rainy</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1" data-direction="Back" data-search="2026_09_18_02_15 airportc dji matrice 3td traj-1">
+<th scope="row"><code>2026_09_18_02_15</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="rainy" data-trajectory="" data-direction="" data-search="2026_09_18_04_00   ">
+<th scope="row"><code>2026_09_18_04_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Rainy</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1" data-direction="Back" data-search="2026_09_18_05_15 airportc dji matrice 3td traj-1">
+<th scope="row"><code>2026_09_18_05_15</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1" data-direction="Back" data-search="2026_09_18_05_30 airportc dji matrice 3td traj-1">
+<th scope="row"><code>2026_09_18_05_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="rainy" data-trajectory="" data-direction="" data-search="2026_09_18_06_00   ">
+<th scope="row"><code>2026_09_18_06_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Rainy</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1" data-direction="Back" data-search="2026_09_18_06_15 airportc dji matrice 3td traj-1">
+<th scope="row"><code>2026_09_18_06_15</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="uav" data-weather="rainy" data-trajectory="Traj-1" data-direction="Back" data-search="2026_09_18_06_30 airportc dji matrice 3td traj-1">
+<th scope="row"><code>2026_09_18_06_30</code></th>
+<td><span class="target-label uav">UAV target</span></td>
+<td>Rainy</td>
+<td>Traj-1</td>
+<td>Back</td>
+<td>AirportC</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="rainy" data-trajectory="" data-direction="" data-search="2026_09_18_07_00   ">
+<th scope="row"><code>2026_09_18_07_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Rainy</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_19_01_00   ">
+<th scope="row"><code>2026_09_19_01_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_19_03_00   ">
+<th scope="row"><code>2026_09_19_03_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_19_05_00   ">
+<th scope="row"><code>2026_09_19_05_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_19_07_00   ">
+<th scope="row"><code>2026_09_19_07_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+<tr data-target="background" data-weather="sunny" data-trajectory="" data-direction="" data-search="2026_09_19_09_00   ">
+<th scope="row"><code>2026_09_19_09_00</code></th>
+<td><span class="target-label background">Target-free background</span></td>
+<td>Sunny</td>
+<td>—</td>
+<td>—</td>
+<td>Not specified</td>
+<td>BS23</td>
+<td>BS23, BS22</td>
+</tr>
+</tbody></table></div><p id="collection-empty" hidden>No collections match these filters. Reset the filters or try another collection ID.</p>
+<details class="collection-descriptions"><summary>Collection descriptions</summary>
+<p><code>2025_12_05_00_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2025_12_05_12_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2025_12_06_00_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2025_12_06_12_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2025_12_06_18_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2025_12_07_06_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2025_12_07_12_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2025_12_08_00_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2025_12_08_12_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2025_12_09_00_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2025_12_09_12_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2025_12_09_18_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2025_12_10_06_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2025_12_10_12_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_01_00</code> — UAV flight on Traj-1-1, Back, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_02_00</code> — UAV flight on Traj-1-1, Back, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_03_00</code> — UAV flight on Traj-1-1, Back, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_04_00</code> — UAV flight on Traj-1-1, Back, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_05_00</code> — UAV flight on Traj-1-1, Back, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_12_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_15_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_16_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_17_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_19_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_02_22_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_03_00_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_03_01_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_03_02_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_03_03_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_03_05_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_03_06_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_03_08_00</code> — UAV flight on Traj-1-1, Go, from AirportB. Weather: sunny.</p>
+<p><code>2026_09_05_00_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_05_01_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_02_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_03_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_04_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_05_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_06_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_05_07_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_08_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_09_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_10_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_14_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_15_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_17_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_18_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_05_19_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_20_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_21_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_22_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_05_23_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_00_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_06_01_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_02_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_03_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_04_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_05_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_06_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_06_07_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_08_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_10_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_11_30</code> — UAV flight on Traj-3, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_14_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_15_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_16_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_17_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_18_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_06_19_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_22_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_06_23_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_00_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_07_01_30</code> — UAV flight on Traj-4, Go, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_02_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_03_30</code> — UAV flight on Traj-4, Go, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_04_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_05_30</code> — UAV flight on Traj-4, Go, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_06_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_07_07_30</code> — UAV flight on Traj-4, Go, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_08_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_09_30</code> — UAV flight on Traj-4, Go, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_10_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_11_30</code> — UAV flight on Traj-4, Go, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_13_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_14_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_15_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_16_30</code> — UAV flight on Traj-4, Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_17_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_18_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_07_19_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_07_21_30</code> — UAV flight on Traj-4, Go → Back, from AirportC. Weather: sunny.</p>
+<p><code>2026_09_17_15_12</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_17_15_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_17_15_45</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_17_16_15</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_17_16_30</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_17_18_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: rainy.</p>
+<p><code>2026_09_17_19_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: rainy.</p>
+<p><code>2026_09_17_22_04</code> — UAV flight on Traj-1-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_17_22_54</code> — UAV flight on Traj-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_17_23_36</code> — UAV flight on Traj-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_18_01_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: rainy.</p>
+<p><code>2026_09_18_02_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: rainy.</p>
+<p><code>2026_09_18_02_15</code> — UAV flight on Traj-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_18_04_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: rainy.</p>
+<p><code>2026_09_18_05_15</code> — UAV flight on Traj-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_18_05_30</code> — UAV flight on Traj-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_18_06_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: rainy.</p>
+<p><code>2026_09_18_06_15</code> — UAV flight on Traj-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_18_06_30</code> — UAV flight on Traj-1, Back, from AirportC. Weather: rainy.</p>
+<p><code>2026_09_18_07_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: rainy.</p>
+<p><code>2026_09_19_01_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_19_03_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_19_05_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_19_07_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+<p><code>2026_09_19_09_00</code> — Empty-scene background capture; no UAV flight trajectory is assigned. Weather: sunny.</p>
+</details>
+<!-- COLLECTIONS:END -->
+<h2 id="trajectory-conventions">Trajectory and direction conventions</h2><p>Traj-1-1-2025 and Traj-1-1-202609 are recording IDs for the same geometric trajectory, shown here as Traj-1-1. Original IDs are retained in CSV and JSON. Go → Back denotes both flight directions within one collection. Collection IDs are not presented as UTC measurement timestamps; use the individual file timestamps for alignment.</p><div class="doc-bottom"><a href="https://github.com/ffxu1024/CellularEye/blob/main/docs/collections.md">View source on GitHub ↗</a><a href="https://github.com/ffxu1024/CellularEye/issues">Report an issue ↗</a></div></main><aside class="page-toc"><p class="eyebrow">ON THIS PAGE</p><a href="#trajectory-conventions">Trajectory and direction conventions</a></aside></div><footer class="site-footer"><div><a class="brand" href="index.html">CellularEye</a><p>Real-world measurements for integrated sensing and communication.</p></div><div><a href="https://doi.org/10.57760/sciencedb.018bv">ScienceDB</a><a href="collections.html">Collections</a><a href="https://github.com/ffxu1024/CellularEye">GitHub</a><a href="http://pmldatanet.com.cn/dataapp/multimodal">PML portal</a><a href="index.html#citation">Citation</a><a href="terms.html">Usage terms</a></div></footer></body></html>
