@@ -28,6 +28,7 @@ python -m pip install -e .</code></pre>
 <p>The <code>check_bin.py</code> workflow renders RD sequences and a 3D UAV trajectory with the RF collection segment highlighted. Collections without UAV records can still be used for RD animation.</p>
 <p>From the repository root, run:</p>
 <pre><code class="language-bash">python scripts/check_bin.py \
+  --metadata_path scripts/real_dataset_metadata.yaml \
   --collection_path /path/to/2025_12_09_12_00 \
   --modality mmw \
   --bs_id 23 \
@@ -38,6 +39,7 @@ python -m pip install -e .</code></pre>
   --max_frames 20</code></pre>
 <p>To reproduce the sunny gallery interval, select the corresponding collection and display window:</p>
 <pre><code class="language-bash">python scripts/check_bin.py \
+  --metadata_path scripts/real_dataset_metadata.yaml \
   --collection_path /path/to/2026_09_05_02_30 \
   --bs_id 23 --beam_id 14 \
   --frame_start 24 --max_frames 27 \
@@ -49,6 +51,7 @@ python -m pip install -e .</code></pre>
 <p>The real-data generator uses the position-assisted annotation workflow: associate UAV records with radio timestamps, compute geometric references, refine centers using local echoes, and export RD images and YOLO labels.</p>
 <p>Export real-data images and labels with:</p>
 <pre><code class="language-bash">python scripts/generate_real_dataset.py \
+  --metadata_path scripts/real_dataset_metadata.yaml \
   --input_dir /path/to/collection_parent \
   --output_dir datasets/real_uav \
   --bs_id 23 \
@@ -66,4 +69,6 @@ python -m pip install -e .</code></pre>
 <pre><code class="language-bash">python src/visualize_real_dataset.py \
   --input_dir datasets/real_uav_bs23_beam14_w30h30 \
   --output_dir results/labels</code></pre>
-<p>This saves an image grid and an annotated GIF. Images are paired with labels by split and filename, including datasets with fewer than eight images.</p><div class="doc-bottom"><a href="https://github.com/ffxu1024/CellularEye/blob/main/docs/quickstart.md">View source on GitHub ↗</a><a href="https://github.com/ffxu1024/CellularEye/issues">Report an issue ↗</a></div></main><aside class="page-toc"><p class="eyebrow">ON THIS PAGE</p><a href="#installation">Installation</a><a href="#rd-visualization">RD visualization</a><a href="#trajectory-and-collection-window-visualization">Trajectory and collection-window visualization</a><a href="#real-data-generation">Real-data generation</a><a href="#preview-generated-labels">Preview generated labels</a></aside></div><footer class="site-footer"><div><a class="brand" href="index.html">CellularEye</a><p>Real-world measurements for integrated sensing and communication.</p></div><div><a href="https://doi.org/10.57760/sciencedb.018bv">ScienceDB</a><a href="collections.html">Collections</a><a href="https://github.com/ffxu1024/CellularEye">GitHub</a><a href="http://pmldatanet.com.cn/dataapp/multimodal">PML portal</a><a href="index.html#citation">Citation</a><a href="terms.html">Usage terms</a></div></footer></body></html>
+<p>This saves an image grid and an annotated GIF. Images are paired with labels by split and filename, including datasets with fewer than eight images.</p>
+<h2 id="reading-collection-metadata">Reading collection metadata</h2>
+<p>The public <code>scripts/real_dataset_metadata.yaml</code> contains the 116 released collections, their target/weather attributes, trajectory groups, and base-station coordinates. Both commands above accept <code>--metadata_path</code> to read its <code>base_stations</code> section. Select the receiver and transmitter explicitly with <code>--bs_id</code> and <code>--tx_bs_id</code> using the collection catalog; metadata does not select recordings or change these CLI defaults automatically. Omitting this option uses the packaged station configuration, which has identical coordinates. The generated YOLO <code>dataset.yaml</code> is a separate file used to locate exported images and labels.</p><div class="doc-bottom"><a href="https://github.com/ffxu1024/CellularEye/blob/main/docs/quickstart.md">View source on GitHub ↗</a><a href="https://github.com/ffxu1024/CellularEye/issues">Report an issue ↗</a></div></main><aside class="page-toc"><p class="eyebrow">ON THIS PAGE</p><a href="#installation">Installation</a><a href="#rd-visualization">RD visualization</a><a href="#trajectory-and-collection-window-visualization">Trajectory and collection-window visualization</a><a href="#real-data-generation">Real-data generation</a><a href="#preview-generated-labels">Preview generated labels</a><a href="#reading-collection-metadata">Reading collection metadata</a></aside></div><footer class="site-footer"><div><a class="brand" href="index.html">CellularEye</a><p>Real-world measurements for integrated sensing and communication.</p></div><div><a href="https://doi.org/10.57760/sciencedb.018bv">ScienceDB</a><a href="collections.html">Collections</a><a href="https://github.com/ffxu1024/CellularEye">GitHub</a><a href="http://pmldatanet.com.cn/dataapp/multimodal">PML portal</a><a href="index.html#citation">Citation</a><a href="terms.html">Usage terms</a></div></footer></body></html>

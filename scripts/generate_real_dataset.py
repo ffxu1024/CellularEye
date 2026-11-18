@@ -31,6 +31,9 @@ from cellulareye.utils.utils import (
 
 def main():
     parser = argparse.ArgumentParser(description="Generate YOLO dataset from real radar data.")
+    parser.add_argument('--metadata_path', type=str, default=None,
+        help='Public collection metadata YAML supplying base-station coordinates; '
+             'Tx/Rx selection remains controlled by --tx_bs_id and --bs_id')
     parser.add_argument("--input_dir", type=str, default="data/gt/sunny/uav/2025_12", help="Root dir containing data collections")
     parser.add_argument("--output_dir", type=str, default="datasets/real_uav", help="Base directory for output dataset")
     parser.add_argument("--bs_id", type=int, default=23, help="Base Station ID")
@@ -81,6 +84,8 @@ def main():
     parser.add_argument('--max_frames', type=int, default=None, help='Optional per-collection preview limit')
     parser.add_argument('--target_id', default=None, help='Required when a collection contains multiple UAV tracks')
     args = parser.parse_args()
+    if args.metadata_path and not Path(args.metadata_path).expanduser().is_file():
+        parser.error('--metadata_path must point to an existing YAML file')
     if not Path(args.input_dir).is_dir():
         parser.error('--input_dir must be a directory containing collection directories')
     if args.max_frames is not None and args.max_frames < 1:
@@ -92,7 +97,8 @@ def main():
 
     # Initialize physical parameters and coordinate references
     cfg = ISACConfig()
-    scenario = ScenarioConfig.from_yaml()
+    scenario = (ScenarioConfig.from_yaml(Path(args.metadata_path).expanduser().resolve())
+                    if args.metadata_path else ScenarioConfig.from_yaml())
 
     # Prepare YOLO Directories
     dataset_name = f"{Path(args.output_dir).name}_bs{args.bs_id}_beam{args.beam_id}_w{args.width_bin}h{args.height_bin}"

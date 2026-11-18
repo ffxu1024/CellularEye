@@ -12,6 +12,9 @@ from cellulareye.utils.plot import (animate_rd_maps, plot_gt_3d_trajectory,
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--metadata_path', type=str, default=None,
+        help='Public collection metadata YAML supplying base-station coordinates; '
+             'Tx/Rx selection remains controlled by --tx_bs_id and --bs_id')
     p.add_argument('--collection_path', required=True)
     p.add_argument('--modality', choices=['mmw'], default='mmw')
     p.add_argument('--bs_id', type=int, choices=[21, 22, 23, 24], default=23)
@@ -28,6 +31,8 @@ def main():
     p.add_argument('--box_height_bins', type=int, default=30)
     p.add_argument('--trajectory_animation', action='store_true')
     a = p.parse_args()
+    if a.metadata_path and not Path(a.metadata_path).expanduser().is_file():
+        p.error('--metadata_path must point to an existing YAML file')
     if a.max_frames is not None and a.max_frames < 1:
         p.error('--max_frames must be positive')
     if a.frame_start < 0:
@@ -49,7 +54,8 @@ def main():
     tracks = load_gt_data(a.collection_path, a.target_type)
     centers = []
     if tracks:
-        scenario = ScenarioConfig.from_yaml()
+        scenario = (ScenarioConfig.from_yaml(Path(a.metadata_path).expanduser().resolve())
+                    if a.metadata_path else ScenarioConfig.from_yaml())
         for target, (gt_times, coords, _) in tracks.items():
             enu, stations = LLA_to_ENU(scenario, coords)
             overlap = check_collection_and_gt_overlap(times, gt_times)

@@ -116,12 +116,24 @@ class ScenarioConfig:
         #     self.print_bs_summary(bs_id)
 
     @classmethod
-    def from_yaml(cls, yaml_name: str = "base_stations.yaml") -> "ScenarioConfig":
-        """Factory method to instantiate ScenarioConfig from a YAML file."""
-        file_path = Path(__file__).parent / yaml_name
+    def from_yaml(cls, yaml_name: str | Path = "base_stations.yaml") -> "ScenarioConfig":
+        """Read a station-only YAML or the public collection metadata YAML.
+
+        Explicit relative paths are resolved from the working directory. Bare
+        configuration names retain the packaged-config fallback.
+        """
+        file_path = Path(yaml_name).expanduser()
+        if not file_path.is_absolute() and not file_path.exists():
+            file_path = Path(__file__).parent / file_path
 
         with open(file_path, 'r', encoding='utf-8') as f:
             raw_data = yaml.safe_load(f)
+
+        if not isinstance(raw_data, dict):
+            raise ValueError(f"Expected a YAML mapping in {file_path}")
+        raw_data = raw_data.get("base_stations", raw_data)
+        if not isinstance(raw_data, dict) or not raw_data:
+            raise ValueError(f"Expected a nonempty base_stations mapping in {file_path}")
 
         # Explicitly unpack the list elements into named attributes
         parsed_stations = {}

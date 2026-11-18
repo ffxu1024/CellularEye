@@ -49,6 +49,7 @@ From the repository root, run:
 
 ```bash
 python scripts/check_bin.py \
+  --metadata_path scripts/real_dataset_metadata.yaml \
   --collection_path /path/to/2025_12_09_12_00 \
   --modality mmw \
   --bs_id 23 \
@@ -63,6 +64,7 @@ To reproduce the sunny gallery interval, select the corresponding collection and
 
 ```bash
 python scripts/check_bin.py \
+  --metadata_path scripts/real_dataset_metadata.yaml \
   --collection_path /path/to/2026_09_05_02_30 \
   --bs_id 23 --beam_id 14 \
   --frame_start 24 --max_frames 27 \
@@ -82,6 +84,7 @@ Export real-data images and labels with:
 
 ```bash
 python scripts/generate_real_dataset.py \
+  --metadata_path scripts/real_dataset_metadata.yaml \
   --input_dir /path/to/collection_parent \
   --output_dir datasets/real_uav \
   --bs_id 23 \
@@ -109,3 +112,7 @@ python src/visualize_real_dataset.py \
 ```
 
 This saves an image grid and an annotated GIF. Images are paired with labels by split and filename, including datasets with fewer than eight images.
+
+## Reading collection metadata
+
+The public `scripts/real_dataset_metadata.yaml` contains the 116 released collections, their target/weather attributes, trajectory groups, and base-station coordinates. Both commands above accept `--metadata_path` to read its `base_stations` section. Select the receiver and transmitter explicitly with `--bs_id` and `--tx_bs_id` using the collection catalog; metadata does not select recordings or change these CLI defaults automatically. Omitting this option uses the packaged station configuration, which has identical coordinates. The generated YOLO `dataset.yaml` is a separate file used to locate exported images and labels.
