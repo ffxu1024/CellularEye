@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="515.52pt" height="241.2pt" viewBox="0 0 515.52 241.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-16T11:07:06.688536</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 241.2 
+L 515.52 241.2 
+L 515.52 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 15.84 92.16 
+L 139.68 92.16 
+Q 145.44 92.16 145.44 86.4 
+L 145.44 26.64 
+Q 145.44 20.88 139.68 20.88 
+L 15.84 20.88 
+Q 10.08 20.88 10.08 26.64 
+L 10.08 86.4 
+Q 10.08 92.16 15.84 92.16 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #fff1cc; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 19.8 43.92 
+L 135.72 43.92 
+Q 139.68 43.92 139.68 39.96 
+L 139.68 29.88 
+Q 139.68 25.92 135.72 25.92 
+L 19.8 25.92 
+Q 15.84 25.92 15.84 29.88 
+L 15.84 39.96 
+Q 15.84 43.92 19.8 43.92 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #ffe699"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 195.84 92.16 
+L 319.68 92.16 
+Q 325.44 92.16 325.44 86.4 
+L 325.44 26.64 
+Q 325.44 20.88 319.68 20.88 
+L 195.84 20.88 
+Q 190.08 20.88 190.08 26.64 
+L 190.08 86.4 
+Q 190.08 92.16 195.84 92.16 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #e1efd9; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 199.8 43.92 
+L 315.72 43.92 
+Q 319.68 43.92 319.68 39.96 
+L 319.68 29.88 
+Q 319.68 25.92 315.72 25.92 
+L 199.8 25.92 
+Q 195.84 25.92 195.84 29.88 
+L 195.84 39.96 
+Q 195.84 43.92 199.8 43.92 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #c5dfb4"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 375.84 92.16 
+L 499.68 92.16 
+Q 505.44 92.16 505.44 86.4 
+L 505.44 26.64 
+Q 505.44 20.88 499.68 20.88 
+L 375.84 20.88 
+Q 370.08 20.88 370.08 26.64 
+L 370.08 86.4 
+Q 370.08 92.16 375.84 92.16 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #deebf7; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 379.8 43.92 
+L 495.72 43.92 
+Q 499.68 43.92 499.68 39.96 
+L 499.68 29.88 
+Q 499.68 25.92 495.72 25.92 
+L 379.8 25.92 
+Q 375.84 25.92 375.84 29.88 
+L 375.84 39.96 
+Q 375.84 43.92 379.8 43.92 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #bcd6ed"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 147.24 61.2 
+L 187.329671 61.2 
+" clip-path="url(#p98bfd70c6e)" style="fill: none; stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+    <path d="M 183.849671 59.46 
+L 187.329671 61.2 
+L 183.849671 62.94 
+z
+" clip-path="url(#p98bfd70c6e)" style="stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 327.24 61.2 
+L 367.329671 61.2 
+" clip-path="url(#p98bfd70c6e)" style="fill: none; stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+    <path d="M 363.849671 59.46 
+L 367.329671 61.2 
+L 363.849671 62.94 
+z
+" clip-path="url(#p98bfd70c6e)" style="stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 437.76 93.96 
+L 437.76 125.28 
+L 77.76 125.28 
+L 77.76 155.649671 
+" clip-path="url(#p98bfd70c6e)" style="fill: none; stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+    <path d="M 79.5 152.169671 
+L 77.76 155.649671 
+L 76.02 152.169671 
+z
+" clip-path="url(#p98bfd70c6e)" style="stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 15.84 229.68 
+L 139.68 229.68 
+Q 145.44 229.68 145.44 223.92 
+L 145.44 164.16 
+Q 145.44 158.4 139.68 158.4 
+L 15.84 158.4 
+Q 10.08 158.4 10.08 164.16 
+L 10.08 223.92 
+Q 10.08 229.68 15.84 229.68 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #e1efd9; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 19.8 181.44 
+L 135.72 181.44 
+Q 139.68 181.44 139.68 177.48 
+L 139.68 167.4 
+Q 139.68 163.44 135.72 163.44 
+L 19.8 163.44 
+Q 15.84 163.44 15.84 167.4 
+L 15.84 177.48 
+Q 15.84 181.44 19.8 181.44 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #c5dfb4"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 195.84 229.68 
+L 319.68 229.68 
+Q 325.44 229.68 325.44 223.92 
+L 325.44 164.16 
+Q 325.44 158.4 319.68 158.4 
+L 195.84 158.4 
+Q 190.08 158.4 190.08 164.16 
+L 190.08 223.92 
+Q 190.08 229.68 195.84 229.68 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #fae4d5; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 199.8 181.44 
+L 315.72 181.44 
+Q 319.68 181.44 319.68 177.48 
+L 319.68 167.4 
+Q 319.68 163.44 315.72 163.44 
+L 199.8 163.44 
+Q 195.84 163.44 195.84 167.4 
+L 195.84 177.48 
+Q 195.84 181.44 199.8 181.44 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #f8caac"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 375.84 229.68 
+L 499.68 229.68 
+Q 505.44 229.68 505.44 223.92 
+L 505.44 164.16 
+Q 505.44 158.4 499.68 158.4 
+L 375.84 158.4 
+Q 370.08 158.4 370.08 164.16 
+L 370.08 223.92 
+Q 370.08 229.68 375.84 229.68 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #fff1cc; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 379.8 181.44 
+L 495.72 181.44 
+Q 499.68 181.44 499.68 177.48 
+L 499.68 167.4 
+Q 499.68 163.44 495.72 163.44 
+L 379.8 163.44 
+Q 375.84 163.44 375.84 167.4 
+L 375.84 177.48 
+Q 375.84 181.44 379.8 181.44 
+z
+" clip-path="url(#p98bfd70c6e)" style="fill: #ffe699"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 147.24 198.72 
+L 187.329671 198.72 
+" clip-path="url(#p98bfd70c6e)" style="fill: none; stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+    <path d="M 183.849671 196.98 
+L 187.329671 198.72 
+L 183.849671 200.46 
+z
+" clip-path="url(#p98bfd70c6e)" style="stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 327.24 198.72 
+L 367.329671 198.72 
+" clip-path="url(#p98bfd70c6e)" style="fill: none; stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+    <path d="M 363.849671 196.98 
+L 367.329671 198.72 
+L 363.849671 200.46 
+z
+" clip-path="url(#p98bfd70c6e)" style="stroke: #000000; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 10px; font-family: 'Liberation Serif'; text-anchor: start" x="10.08" y="10.310625" transform="rotate(-0 10.08 10.310625)">Binary reading and CSI reconstruction</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'Liberation Serif'; text-anchor: middle" x="77.76" y="37.361406" transform="rotate(-0 77.76 37.361406)">Binary file (.bin)</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9.4px; font-family: 'Liberation Serif'; text-anchor: middle" x="77.76" y="61.660406" transform="rotate(-0 77.76 61.660406)">Interleaved I / Q</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.1px; font-family: 'Liberation Serif'; text-anchor: middle" x="77.76" y="80.655469" transform="rotate(-0 77.76 80.655469)">Signed 16-bit, big-endian</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 10px; font-family: 'Liberation Serif'; text-anchor: middle" x="257.76" y="37.361406" transform="rotate(-0 257.76 37.361406)">Stored range profiles</text>
+   </g>
+   <g id="text_6">
+    <!-- $G=I+jQ$ -->
+    <g transform="translate(238.913 61.660406)">
+     <text>
+      <tspan x="0" y="-0.75" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">G</tspan>
+      <tspan x="15.924612" y="-0.75" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">I</tspan>
+      <tspan x="28.196271" y="-0.75" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">j</tspan>
+      <tspan x="30.806851" y="-0.75" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">Q</tspan>
+      <tspan x="8.136035" y="-0.75" style="font-size: 9.4px; font-family: 'STIXGeneral'">=</tspan>
+      <tspan x="20.407693" y="-0.75" style="font-size: 9.4px; font-family: 'STIXGeneral'">+</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9.1px; font-family: 'Liberation Serif'; text-anchor: middle" x="257.76" y="80.655469" transform="rotate(-0 257.76 80.655469)">range × slow time</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'Liberation Serif'; text-anchor: middle" x="437.76" y="37.324688" transform="rotate(-0 437.76 37.324688)">Complex CSI</text>
+   </g>
+   <g id="text_9">
+    <!-- $H=Y/X$ -->
+    <g transform="translate(422.955 61.660406)">
+     <text>
+      <tspan x="0" y="-0.65625" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">H</tspan>
+      <tspan x="15.924612" y="-0.65625" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">Y</tspan>
+      <tspan x="23.756369" y="-0.65625" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">X</tspan>
+      <tspan x="8.136035" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">=</tspan>
+      <tspan x="21.145789" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">/</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9.1px; font-family: 'Liberation Serif'; text-anchor: middle" x="437.76" y="80.668266" transform="rotate(-0 437.76 80.668266)">subcarrier × slow time</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8.9px; font-family: 'Liberation Serif'; text-anchor: middle" x="167.76" y="42.460172" transform="rotate(-0 167.76 42.460172)">Decode</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9.4px; font-family: 'Liberation Serif'; text-anchor: middle" x="347.76" y="39.700406" transform="rotate(-0 347.76 39.700406)">FFT</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8.8px; font-family: 'Liberation Serif'; text-anchor: middle" x="347.76" y="85.611375" transform="rotate(-0 347.76 85.611375)">range</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9.4px; font-family: 'Liberation Serif'; text-anchor: middle" x="257.76" y="116.020406" transform="rotate(-0 257.76 116.020406)">IFFT over subcarriers</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 10px; font-family: 'Liberation Serif'; text-anchor: middle" x="257.76" y="142.121406" transform="rotate(-0 257.76 142.121406)">RD formation and display</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10px; font-family: 'Liberation Serif'; text-anchor: middle" x="77.76" y="174.881406" transform="rotate(-0 77.76 174.881406)">Recovered range profiles</text>
+   </g>
+   <g id="text_17">
+    <!-- $G=\mathrm{IFFT}(H)$ -->
+    <g transform="translate(53.602 199.180406)">
+     <text>
+      <tspan x="0" y="-0.65625" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">G</tspan>
+      <tspan x="38.358786" y="-0.65625" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">H</tspan>
+      <tspan x="8.136035" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">=</tspan>
+      <tspan x="15.924612" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">I</tspan>
+      <tspan x="19.051688" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">F</tspan>
+      <tspan x="24.272864" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">F</tspan>
+      <tspan x="29.49404" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">T</tspan>
+      <tspan x="35.231711" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">(</tspan>
+      <tspan x="45.138815" y="-0.65625" style="font-size: 9.4px; font-family: 'STIXGeneral'">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9.1px; font-family: 'Liberation Serif'; text-anchor: middle" x="77.76" y="218.175469" transform="rotate(-0 77.76 218.175469)">range × slow time</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10px; font-family: 'Liberation Serif'; text-anchor: middle" x="257.76" y="174.844688" transform="rotate(-0 257.76 174.844688)">Complex RD matrix</text>
+   </g>
+   <g id="text_20">
+    <!-- $Z$  :  range × Doppler -->
+    <g transform="translate(218.28 199.176)">
+     <text>
+      <tspan x="0" y="-0.484375" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">Z</tspan>
+      <tspan x="5.221176" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'"> </tspan>
+      <tspan x="7.568832" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'"> </tspan>
+      <tspan x="9.916489" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">:</tspan>
+      <tspan x="12.525497" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'"> </tspan>
+      <tspan x="14.873154" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'"> </tspan>
+      <tspan x="17.22081" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">r</tspan>
+      <tspan x="20.347961" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">a</tspan>
+      <tspan x="24.515961" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">n</tspan>
+      <tspan x="29.211273" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">g</tspan>
+      <tspan x="33.906586" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">e</tspan>
+      <tspan x="38.074585" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'"> </tspan>
+      <tspan x="40.422241" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">×</tspan>
+      <tspan x="45.718216" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'"> </tspan>
+      <tspan x="48.065872" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">D</tspan>
+      <tspan x="54.847473" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">o</tspan>
+      <tspan x="59.542786" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">p</tspan>
+      <tspan x="64.238098" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">p</tspan>
+      <tspan x="68.933411" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">l</tspan>
+      <tspan x="71.542419" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">e</tspan>
+      <tspan x="75.710419" y="-0.484375" style="font-size: 9.4px; font-family: 'Liberation Serif'">r</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9.1px; font-family: 'Liberation Serif'; text-anchor: middle" x="257.76" y="218.22168" transform="rotate(-0 257.76 218.22168)">Doppler centering: fftshift</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 10px; font-family: 'Liberation Serif'; text-anchor: middle" x="437.76" y="174.844688" transform="rotate(-0 437.76 174.844688)">RD power map</text>
+   </g>
+   <g id="text_23">
+    <!-- $P=|Z|^2$ -->
+    <g transform="translate(423.848 199.180406)">
+     <text>
+      <tspan x="0" y="-0.246875" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">P</tspan>
+      <tspan x="16.760367" y="-0.246875" style="font-style: italic; font-size: 9.4px; font-family: 'STIXGeneral'">Z</tspan>
+      <tspan x="7.093677" y="-0.246875" style="font-size: 9.4px; font-family: 'STIXGeneral'">=</tspan>
+      <tspan x="14.882254" y="-0.246875" style="font-size: 9.4px; font-family: 'STIXGeneral'">|</tspan>
+      <tspan x="21.981543" y="-0.246875" style="font-size: 9.4px; font-family: 'STIXGeneral'">|</tspan>
+      <tspan x="24.004578" y="-3.559375" style="font-size: 6.58px; font-family: 'STIXGeneral'">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_24">
+    <!-- $10\log_{10}(P+10^{-12})$  (dB) -->
+    <g transform="translate(392.3055 218.7755)">
+     <text>
+      <tspan x="0" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">1</tspan>
+      <tspan x="4.546875" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">0</tspan>
+      <tspan x="9.09375" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">l</tspan>
+      <tspan x="11.621811" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">o</tspan>
+      <tspan x="16.168686" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">g</tspan>
+      <tspan x="28.717599" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">(</tspan>
+      <tspan x="38.615224" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">+</tspan>
+      <tspan x="46.15758" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">1</tspan>
+      <tspan x="50.704455" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">0</tspan>
+      <tspan x="66.519516" y="-0.489063" style="font-size: 9.1px; font-family: 'STIXGeneral'">)</tspan>
+      <tspan x="20.856108" y="0.715625" style="font-size: 6.37px; font-family: 'STIXGeneral'">1</tspan>
+      <tspan x="24.03892" y="0.715625" style="font-size: 6.37px; font-family: 'STIXGeneral'">0</tspan>
+      <tspan x="55.391877" y="-3.701563" style="font-size: 6.37px; font-family: 'STIXGeneral'">−</tspan>
+      <tspan x="59.752329" y="-3.701563" style="font-size: 6.37px; font-family: 'STIXGeneral'">1</tspan>
+      <tspan x="62.935141" y="-3.701563" style="font-size: 6.37px; font-family: 'STIXGeneral'">2</tspan>
+      <tspan x="31.745812" y="-0.489063" style="font-style: italic; font-size: 9.1px; font-family: 'STIXGeneral'">P</tspan>
+      <tspan x="69.54773" y="-0.489063" style="font-size: 9.1px; font-family: 'Liberation Serif'"> </tspan>
+      <tspan x="71.821167" y="-0.489063" style="font-size: 9.1px; font-family: 'Liberation Serif'"> </tspan>
+      <tspan x="74.094605" y="-0.489063" style="font-size: 9.1px; font-family: 'Liberation Serif'">(</tspan>
+      <tspan x="77.122895" y="-0.489063" style="font-size: 9.1px; font-family: 'Liberation Serif'">d</tspan>
+      <tspan x="81.66977" y="-0.489063" style="font-size: 9.1px; font-family: 'Liberation Serif'">B</tspan>
+      <tspan x="87.73523" y="-0.489063" style="font-size: 9.1px; font-family: 'Liberation Serif'">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9.4px; font-family: 'Liberation Serif'; text-anchor: middle" x="167.76" y="177.220406" transform="rotate(-0 167.76 177.220406)">IFFT</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8.8px; font-family: 'Liberation Serif'; text-anchor: middle" x="167.76" y="223.156125" transform="rotate(-0 167.76 223.156125)">slow time</text>
+   </g>
+   <g id="text_27">
+    <!-- $|\cdot|^2$ -->
+    <g transform="translate(340.81 177.364688)">
+     <text>
+      <tspan x="0" y="-0.739062" style="font-size: 10px; font-family: 'STIXGeneral'">|</tspan>
+      <tspan x="3.443982" y="-0.739062" style="font-size: 10px; font-family: 'STIXGeneral'">⋅</tspan>
+      <tspan x="7.747964" y="-0.739062" style="font-size: 10px; font-family: 'STIXGeneral'">|</tspan>
+      <tspan x="9.902168" y="-4.264062" style="font-size: 7px; font-family: 'STIXGeneral'">2</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p98bfd70c6e">
+   <rect x="0" y="0" width="515.52" height="241.2"/>
+  </clipPath>
+ </defs>
+</svg>
