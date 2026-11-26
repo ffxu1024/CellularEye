@@ -62,3 +62,7 @@ Images are 8-bit grayscale PNGs with velocity on the horizontal axis and increas
 | `time_2025_traj11_go` | Sunny 2025-12 Traj-1-1 Go | 102 |
 
 Unspecified receivers and beams are BS23/B14. The acquisition-period subset also differs in flight direction from the reference. See the archive README for full annotation and processing conventions.
+
+## Dataset license
+
+The benchmark images, annotations, and metadata are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [Usage terms](terms.md) for attribution.

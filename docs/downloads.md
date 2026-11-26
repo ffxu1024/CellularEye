@@ -1,5 +1,7 @@
 # Download the data
 
+Dataset license: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The same license covers the raw measurements and detection benchmark.
+
 ## Raw measurements — ScienceDB
 
 [Open the published ScienceDB dataset](https://doi.org/10.57760/sciencedb.018bv)

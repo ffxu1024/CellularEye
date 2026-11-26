@@ -9,6 +9,7 @@
 [![Dataset](https://img.shields.io/badge/data-ScienceDB-2865a8)](https://doi.org/10.57760/sciencedb.018bv)
 [![Python](https://img.shields.io/badge/python-3.11%2B-3776ab)](pyproject.toml)
 [![License](https://img.shields.io/badge/code-MIT-8a7043)](LICENSE)
+[![Data license](https://img.shields.io/badge/data_license-CC_BY_4.0-2865a8)](DATA_LICENSE)
 
 [Project Website](https://ffxu1024.github.io/CellularEye/) · [Documentation](https://ffxu1024.github.io/CellularEye/quickstart.html) · [Dataset](https://doi.org/10.57760/sciencedb.018bv) · [Benchmark](https://github.com/ffxu1024/CellularEye/releases/tag/benchmark-v1.0) · [Preprint](https://zenodo.org/records/24473748) · [Citation](#citation) · [Issues](https://github.com/ffxu1024/CellularEye/issues)
 
@@ -92,6 +93,6 @@ If you use CellularEye in your research, please cite the [CellularEye preprint](
 
 ## License & support
 
-Source code: [MIT](LICENSE). Real detection benchmark: **CC BY-NC 4.0**. Follow the terms on each dataset’s distribution page. The existing patent notice and full usage terms are retained in [Usage terms](docs/terms.md).
+Dataset (raw measurements, metadata, benchmark images, and annotations): [CC BY 4.0](DATA_LICENSE). Source code: [MIT](LICENSE). See [Usage terms](docs/terms.md) for attribution and the existing patent notice.
 
 For questions and reproducible bug reports, [open an issue](https://github.com/ffxu1024/CellularEye/issues).

@@ -2,6 +2,8 @@
 # Collection IDs are strings. Target and weather labels apply to collections.
 schema_version: 1
 release:
+  license: CC-BY-4.0
+  license_url: https://creativecommons.org/licenses/by/4.0/
   dataset_doi: 10.57760/sciencedb.018bv
   collection_count: 116
   scope: Collections in the public raw-data archive release
