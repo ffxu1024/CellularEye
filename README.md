@@ -61,6 +61,7 @@ For complete commands and data conventions, use the documentation:
 - [Binary format and timestamp alignment](https://ffxu1024.github.io/CellularEye/data-format.html)
 - [Signal and radar parameters](https://ffxu1024.github.io/CellularEye/parameters.html)
 - [Benchmark download and reading](https://ffxu1024.github.io/CellularEye/benchmark.html)
+- [Detection experiment tools](https://ffxu1024.github.io/CellularEye/experiments.html)
 
 The guides are also available [inside this repository](docs/README.md).
 

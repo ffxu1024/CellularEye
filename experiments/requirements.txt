@@ -1,0 +1,10 @@
+ultralytics==8.4.121
+torch==2.13.0
+torchvision==0.28.0
+numpy==2.4.6
+scipy==1.17.1
+matplotlib==3.10.9
+PyYAML==6.0.3
+pillow==12.3.0
+pandas==3.0.5
+pymap3d==3.2.0

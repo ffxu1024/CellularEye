@@ -1,0 +1,57 @@
+category,group,label,description,method,metric,frames,mean,sample_sd,defined_seeds
+trajectory,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Real,map,66,0.6743494131663076,0.10007764568108755,5
+trajectory,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Real,fp,66,0.18181818181818182,0.03862893570903625,5
+trajectory,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Real,miss,66,0.07272727272727272,0.036173746625191884,5
+trajectory,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Real,mae,66,4.654493264039319,1.591424468270225,5
+trajectory,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Pure Statistics,map,66,0.29182264831043436,0.10191013131178754,5
+trajectory,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Pure Statistics,fp,66,0.693939393939394,0.311878399227166,5
+trajectory,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Pure Statistics,miss,66,0.2787878787878788,0.09315409787235998,5
+trajectory,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Pure Statistics,mae,66,44.22070660741194,12.600593863171516,5
+trajectory,real_Traj-1-1-202609_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Go,sunny Traj-1-1 Go,Real,map,117,0.6630934339002668,0.09280790956875684,5
+trajectory,real_Traj-1-1-202609_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Go,sunny Traj-1-1 Go,Real,fp,117,0.08547008547008547,0.042305533917143874,5
+trajectory,real_Traj-1-1-202609_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Go,sunny Traj-1-1 Go,Real,miss,117,0.14017094017094017,0.03754851732733128,5
+trajectory,real_Traj-1-1-202609_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Go,sunny Traj-1-1 Go,Real,mae,117,1.9286721619076415,1.0073025893736491,5
+trajectory,real_Traj-1-1-202609_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Go,sunny Traj-1-1 Go,Pure Statistics,map,117,0.2400906241559277,0.12652039358362535,5
+trajectory,real_Traj-1-1-202609_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Go,sunny Traj-1-1 Go,Pure Statistics,fp,117,0.5213675213675214,0.27021256341089295,5
+trajectory,real_Traj-1-1-202609_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Go,sunny Traj-1-1 Go,Pure Statistics,miss,117,0.482051282051282,0.08812127465833848,5
+trajectory,real_Traj-1-1-202609_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Go,sunny Traj-1-1 Go,Pure Statistics,mae,117,43.33138138417556,20.191934208635093,5
+trajectory,real_Traj-3_None_Back_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-3 Back,sunny Traj-3 Back,Real,map,425,0.6769054441936213,0.1251585003121749,5
+trajectory,real_Traj-3_None_Back_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-3 Back,sunny Traj-3 Back,Real,fp,425,0.06588235294117646,0.02143631430386894,5
+trajectory,real_Traj-3_None_Back_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-3 Back,sunny Traj-3 Back,Real,miss,425,0.050352941176470586,0.02296981621057088,5
+trajectory,real_Traj-3_None_Back_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-3 Back,sunny Traj-3 Back,Real,mae,425,1.3996058664510806,0.2601644253475863,5
+trajectory,real_Traj-3_None_Back_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-3 Back,sunny Traj-3 Back,Pure Statistics,map,425,0.3828867950422539,0.18485671921403263,5
+trajectory,real_Traj-3_None_Back_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-3 Back,sunny Traj-3 Back,Pure Statistics,fp,425,0.6367058823529412,0.31402554278671563,5
+trajectory,real_Traj-3_None_Back_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-3 Back,sunny Traj-3 Back,Pure Statistics,miss,425,0.1943529411764706,0.07713915884289652,5
+trajectory,real_Traj-3_None_Back_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-3 Back,sunny Traj-3 Back,Pure Statistics,mae,425,21.929581450007774,2.464071237427941,5
+trajectory,real_Traj-4_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-4 Go,sunny Traj-4 Go,Real,map,54,0.41343110750318085,0.11677599123244756,5
+trajectory,real_Traj-4_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-4 Go,sunny Traj-4 Go,Real,fp,54,0.05185185185185185,0.015493704195075472,5
+trajectory,real_Traj-4_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-4 Go,sunny Traj-4 Go,Real,miss,54,0.06666666666666667,0.02808472386685759,5
+trajectory,real_Traj-4_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-4 Go,sunny Traj-4 Go,Real,mae,54,1.8168756927719745,1.901409742697918,5
+trajectory,real_Traj-4_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-4 Go,sunny Traj-4 Go,Pure Statistics,map,54,0.5272295202775206,0.07117957856235936,5
+trajectory,real_Traj-4_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-4 Go,sunny Traj-4 Go,Pure Statistics,fp,54,0.5851851851851853,0.23372982186625144,5
+trajectory,real_Traj-4_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-4 Go,sunny Traj-4 Go,Pure Statistics,miss,54,0.16666666666666666,0.05707790743489793,5
+trajectory,real_Traj-4_None_Go_sunny_snr15.0_tx23_rx23_beam14_w30h30,Traj-4 Go,sunny Traj-4 Go,Pure Statistics,mae,54,15.018083280167133,14.774290566259484,5
+weather,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Real,map,66,0.6743494131663076,0.10007764568108755,5
+weather,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Real,fp,66,0.18181818181818182,0.03862893570903625,5
+weather,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Real,miss,66,0.07272727272727272,0.036173746625191884,5
+weather,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Real,mae,66,4.654493264039319,1.591424468270225,5
+weather,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Pure Statistics,map,66,0.29182264831043436,0.10191013131178754,5
+weather,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Pure Statistics,fp,66,0.693939393939394,0.311878399227166,5
+weather,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Pure Statistics,miss,66,0.2787878787878788,0.09315409787235998,5
+weather,Reference,Ref.,"sunny Traj-1-1 Back, BS23/Beam14",Pure Statistics,mae,66,44.22070660741194,12.600593863171516,5
+weather,real_Traj-1-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Back,rainy Traj-1-1 Back,Real,map,122,0.5146958148967289,0.06907392804590494,5
+weather,real_Traj-1-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Back,rainy Traj-1-1 Back,Real,fp,122,0.15901639344262294,0.053624351586216805,5
+weather,real_Traj-1-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Back,rainy Traj-1-1 Back,Real,miss,122,0.18196721311475408,0.05131959292622468,5
+weather,real_Traj-1-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Back,rainy Traj-1-1 Back,Real,mae,122,15.619801660387349,11.661699758465431,5
+weather,real_Traj-1-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Back,rainy Traj-1-1 Back,Pure Statistics,map,122,0.17668128591647395,0.05539656574135601,5
+weather,real_Traj-1-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Back,rainy Traj-1-1 Back,Pure Statistics,fp,122,1.080327868852459,0.3857426166492132,5
+weather,real_Traj-1-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Back,rainy Traj-1-1 Back,Pure Statistics,miss,122,0.43606557377049177,0.09791566005913412,5
+weather,real_Traj-1-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1-1 Back,rainy Traj-1-1 Back,Pure Statistics,mae,122,55.988173334756404,14.26209066071279,5
+weather,real_Traj-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1 Back,rainy Traj-1 Back,Real,map,134,0.23396605229122844,0.09619311652620795,5
+weather,real_Traj-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1 Back,rainy Traj-1 Back,Real,fp,134,0.09701492537313433,0.06920610817534106,5
+weather,real_Traj-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1 Back,rainy Traj-1 Back,Real,miss,134,0.4880597014925373,0.058428594421084744,5
+weather,real_Traj-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1 Back,rainy Traj-1 Back,Real,mae,134,12.989871136474633,11.437012286369093,5
+weather,real_Traj-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1 Back,rainy Traj-1 Back,Pure Statistics,map,134,0.18512310472304871,0.0443280146651677,5
+weather,real_Traj-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1 Back,rainy Traj-1 Back,Pure Statistics,fp,134,0.835820895522388,0.3248198088480651,5
+weather,real_Traj-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1 Back,rainy Traj-1 Back,Pure Statistics,miss,134,0.5567164179104478,0.06030478761443857,5
+weather,real_Traj-1_None_Back_rainy_snr15.0_tx23_rx23_beam14_w30h30,Traj-1 Back,rainy Traj-1 Back,Pure Statistics,mae,134,70.53851143637941,15.104467667514545,5

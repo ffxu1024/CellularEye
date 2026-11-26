@@ -1,0 +1,25 @@
+figure,domain,method,metric,mean,sample_sd,defined_seeds
+measured_background,Rain1,Real,map,0.23396605229122844,0.09619311652620795,5
+measured_background,Rain1,Pure Statistics,map,0.18512310472304871,0.0443280146651677,5
+measured_background,Rain1,Real background + Statistics,map,0.506291243763994,0.0820466732712485,5
+measured_background,Rain1,Real,fp,0.09701492537313433,0.06920610817534106,5
+measured_background,Rain1,Pure Statistics,fp,0.835820895522388,0.3248198088480651,5
+measured_background,Rain1,Real background + Statistics,fp,0.07761194029850746,0.05624311546691574,5
+measured_background,Rain1,Real,miss,0.4880597014925373,0.058428594421084744,5
+measured_background,Rain1,Pure Statistics,miss,0.5567164179104478,0.06030478761443857,5
+measured_background,Rain1,Real background + Statistics,miss,0.32537313432835824,0.13039429895957258,5
+measured_background,Rain1,Real,mae,12.989871136474633,11.437012286369093,5
+measured_background,Rain1,Pure Statistics,mae,70.53851143637941,15.104467667514545,5
+measured_background,Rain1,Real background + Statistics,mae,3.213570653581478,0.8573793278977782,5
+measured_background,BS22,Real,map,0.01424560045445976,0.009245642558283789,5
+measured_background,BS22,Pure Statistics,map,0.004909701661708835,0.005487850225494137,5
+measured_background,BS22,Real background + Statistics,map,0.5751864386313595,0.014745980334320757,5
+measured_background,BS22,Real,fp,2.7379310344827585,1.7720246453248119,5
+measured_background,BS22,Pure Statistics,fp,13.458620689655172,3.2860684922187655,5
+measured_background,BS22,Real background + Statistics,fp,0.25517241379310346,0.09155805549897761,5
+measured_background,BS22,Real,miss,0.9379310344827586,0.023131737698273674,5
+measured_background,BS22,Pure Statistics,miss,0.8827586206896552,0.0429306882689267,5
+measured_background,BS22,Real background + Statistics,miss,0.20689655172413793,0.027261014311796377,5
+measured_background,BS22,Real,mae,209.90347326234115,32.583074796484034,5
+measured_background,BS22,Pure Statistics,mae,112.72958523019634,33.80292160906965,5
+measured_background,BS22,Real background + Statistics,mae,8.22221717641266,3.0591556949373384,5

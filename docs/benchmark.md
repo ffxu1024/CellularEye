@@ -66,3 +66,5 @@ Unspecified receivers and beams are BS23/B14. The acquisition-period subset also
 ## Dataset license
 
 The benchmark images, annotations, and metadata are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [Usage terms](terms.md) for attribution.
+
+For fixed-source training, detector evaluation, and numerical plots, see [Detection experiments](experiments.html).

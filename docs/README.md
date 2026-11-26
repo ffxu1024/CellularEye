@@ -8,6 +8,7 @@
 - [Data format](data-format.md) — Collection directories, binary storage, and time alignment.
 - [Signal & radar parameters](parameters.md) — Acquisition settings, hardware specifications, and RD coordinates.
 - [Detection benchmark](benchmark.md) — Fixed splits, labels, scenario subsets, and reading examples.
+- [Detection experiments](experiments.md) — Train YOLO, evaluate measured scenarios and CFAR, and rebuild numerical plots.
 - [Usage terms](terms.md) — Source-code licensing, dataset terms, and patent notice.
 
 [Published-paper citation](https://ffxu1024.github.io/CellularEye/#citation) · [BibTeX](CITATION.bib)

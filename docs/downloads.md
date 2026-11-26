@@ -16,6 +16,12 @@ DOI: [10.57760/sciencedb.018bv](https://doi.org/10.57760/sciencedb.018bv) · [CS
 
 The approximately 586 MB archive contains measured RD images, YOLO labels, fixed splits, and scenario metadata. It has **224 training, 71 validation, and 1,141 test images** and requires no raw binary recordings. See the [benchmark guide](benchmark.md) for extraction and reading commands.
 
+## Fixed-source detection training data
+
+[Download detection training v1.0](https://github.com/ffxu1024/CellularEye/releases/tag/detection-v1.0)
+
+The approximately 481 MB archive contains four fixed sources, each with 224 training and 71 validation image/label pairs. It includes the measured source, simulated echoes with AWGN, and two sources with measured backgrounds. See [Detection experiments](experiments.html) for installation, training, evaluation, and plotting commands.
+
 ## Auxiliary portal — PML
 
 The [PML multimodal data portal](http://pmldatanet.com.cn/dataapp/multimodal) provides an additional dataset information and access entry point. ScienceDB is the main source for this release.

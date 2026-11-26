@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "date": "2026-11-27",
+  "versions": {
+    "python": "3.11.13",
+    "ultralytics": "8.4.121",
+    "torch": "2.13.0+cu130",
+    "torchvision": "0.28.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9"
+  },
+  "training_sources": 4,
+  "training_validation_pairs": 1180,
+  "training_seeds": [
+    1,
+    101,
+    666,
+    999,
+    2026
+  ],
+  "training_entrypoint_test": "one epoch, two train and two validation images per source, CPU; best/last checkpoint and CSV checked",
+  "full_training_repeated": false,
+  "test_samples": 1141,
+  "full_checkpoint_evaluation": {
+    "device": "RTX 4090",
+    "per_seed_rows": 140,
+    "mAP_and_TP_FP_FN_match_archived": true,
+    "maximum_center_error_replay_difference_bins": 7.754480998656277e-06
+  },
+  "conventional_evaluation": {
+    "frames": 1019,
+    "grouped_rows": 56,
+    "per_frame_counts": 7133,
+    "all_counts_match_archived": true
+  },
+  "numerical_reconstruction": {
+    "status": "passed",
+    "domain_mean_sd_pairs": 48,
+    "subset_mean_sd_pairs": 56,
+    "background_mean_sd_pairs": 24,
+    "table_rows": 18,
+    "sample_sd": "ddof=1 across five fixed training seeds",
+    "overview_rain_frames": 256,
+    "background_rain_frames": 134,
+    "cfar_rain_frames": 134
+  },
+  "displayed_numerical_panels_checked": 36,
+  "independent_directory": {
+    "commands_passed": 11,
+    "public_source_only": true,
+    "private_imports": false
+  },
+  "initialization": {
+    "model": "yolo26n.pt",
+    "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+  },
+  "training_histories_verified": {
+    "runs": 20,
+    "epochs_each": 300
+  },
+  "new_evaluation_plot_pipeline": "prepare_results.py and plot_results.py completed on all full GPU evaluation outputs"
+}

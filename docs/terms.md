@@ -2,7 +2,7 @@
 
 ## Dataset license
 
-The CellularEye dataset, including released raw measurements, collection metadata, benchmark RD images, and annotations, is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+The CellularEye dataset, including released raw measurements, collection metadata, benchmark and training RD images, annotations, and experiment result data, is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 You may share and adapt the data, including for commercial use, provided you give appropriate credit, link to the license, and indicate any changes. Please credit the CellularEye dataset contributors and include the [dataset DOI](https://doi.org/10.57760/sciencedb.018bv). The [CellularEye preprint](https://zenodo.org/records/24473748) describes the dataset and toolkit.
 
